@@ -23,10 +23,13 @@ public class SpellCaster : MonoBehaviour
     public event Action<KeyCode> OnInputAdded;
     public event Action OnCastingCleared;
     public event Action<LocationList, SpellData> OnCastedSpell;
+    public event Action<SpellData, float> OnCastDelayStarted;
 
     HashSet<KeyCode> watchedKeys = new HashSet<KeyCode>();
     float timeSinceLastInput = 0f;
     const float castingTimeout = 2f;
+    [SerializeField] float castDelay = 1f;
+    bool isCastingDelay = false;
 
     void Awake()
     {
@@ -47,7 +50,7 @@ public class SpellCaster : MonoBehaviour
 
     public void Update()
     {
-        if (movement.CurrentLocation.canCast && !movement.Moving)
+        if (movement.CurrentLocation.canCast && !movement.Moving && !isCastingDelay)
         {
             foreach (KeyCode key in watchedKeys)
             {
@@ -77,8 +80,10 @@ public class SpellCaster : MonoBehaviour
         {
             if (activelyCasting.SequenceEqual(spell.inputs))
             {
-                CastSpell(spell);
                 ClearCasting();
+                isCastingDelay = true;
+                OnCastDelayStarted?.Invoke(spell, castDelay);
+                StartCoroutine(Co_CastDelay(spell));
                 return;
             }
         }
@@ -94,6 +99,8 @@ public class SpellCaster : MonoBehaviour
 
     void ClearCasting()
     {
+        StopAllCoroutines();
+        isCastingDelay = false;
         activelyCasting.Clear();
         timeSinceLastInput = 0f;
         OnCastingCleared?.Invoke();
@@ -135,6 +142,13 @@ public class SpellCaster : MonoBehaviour
 		}
 
         OnCastedSpell?.Invoke(location, spell);
+    }
+
+    IEnumerator Co_CastDelay(SpellData spell)
+    {
+        yield return new WaitForSeconds(castDelay);
+        isCastingDelay = false;
+        CastSpell(spell);
     }
 
     IEnumerator Co_Wait(float seconds, Action onComplete)
