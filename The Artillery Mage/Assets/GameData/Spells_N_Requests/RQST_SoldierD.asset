@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RQST_SoldierD
   m_EditorClassIdentifier: 
   personRequesting: Kingdom Soldier
-  requestDetails: Urgent request! Please deliver a precision strike to the <color=#E39032>village</color!;
+  requestDetails: Urgent request! Please deliver a precision strike to the <color=#E39032>village</color>;
     We've surrounded the demons but our position won't hold!
   timeToComplete: 20
   desiredLocation: 2

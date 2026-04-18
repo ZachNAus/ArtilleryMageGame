@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9734c4785cf27144f83873def292b046, type: 3}
-  m_Name: SPL_MassHeal
+  m_Name: SPL_Purification
   m_EditorClassIdentifier: 
-  name: Mass Heal
+  name: Grand Rejuvenation
   inputs: 13010000120100001401000011010000
   visualEffects: {fileID: 0}
+  particleAliveTime: 0
