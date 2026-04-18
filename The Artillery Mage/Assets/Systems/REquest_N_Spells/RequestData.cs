@@ -17,10 +17,12 @@ public enum LocationList
 [CreateAssetMenu(menuName = "Request")]
 public class RequestData : ScriptableObject
 {
+    public new string name = "";
+
     public string personRequesting;
     [TextArea(3,10)]
     public string requestDetails;
-
+    public float timeToComplete;
     [Space]
 
     public LocationList desiredLocation;
