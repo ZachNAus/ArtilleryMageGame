@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9734c4785cf27144f83873def292b046, type: 3}
   m_Name: SPL_DemonPrecisionStrike
   m_EditorClassIdentifier: 
+  name: Demon Precision Strike
   inputs: 130100001301000011010000
   visualEffects: {fileID: 0}
