@@ -42,6 +42,11 @@ public class RequestManager : MonoBehaviour
 		timeTillNextSpawn = startGameDelay;
 	}
 
+	private void Start()
+	{
+		SpellCaster.Instance.OnCastedSpell += OnSpellCasted;
+	}
+
 	public void SpawnRequest()
 	{
 		var pool = new List<RequestData>();
@@ -88,7 +93,7 @@ public class RequestManager : MonoBehaviour
 		}
 	}
 
-	void OnSpellCasted(SpellData spell, LocationList location)
+	void OnSpellCasted(LocationList location, SpellData spell)
 	{
 		ActiveRequestData cleanup = null;
 		bool fuckedUp = false;

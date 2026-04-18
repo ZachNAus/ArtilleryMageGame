@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 [CreateAssetMenu(menuName = "Spell")]
 public class SpellData : ScriptableObject
@@ -9,5 +10,8 @@ public class SpellData : ScriptableObject
 
 	public List<KeyCode> inputs = new List<KeyCode>();
 
-	public GameObject visualEffects;
+	[Header("FX")]
+	public VisualEffect visualEffects;
+
+	public float particleAliveTime;
 }
