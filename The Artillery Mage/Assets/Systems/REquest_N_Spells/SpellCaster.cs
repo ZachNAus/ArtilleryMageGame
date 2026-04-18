@@ -31,6 +31,8 @@ public class SpellCaster : MonoBehaviour
     void Awake()
     {
         Instance = this;
+
+        MovementSystem.OnArrived += x => ClearCasting();
     }
 
     void Start()
@@ -118,7 +120,7 @@ public class SpellCaster : MonoBehaviour
 
     void CastSpell(SpellData spell)
     {
-        LocationList location = GetClosestLookedAtLocation();
+        LocationList location = GetClosestLookedAtLocation();//
 
         if (spell.visualEffects != null && locations.TryGetValue(location, out Transform spawnPoint))
 		{
