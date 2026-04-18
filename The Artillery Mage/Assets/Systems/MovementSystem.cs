@@ -37,6 +37,8 @@ public class MovementSystem : MonoBehaviour
 		GoToLocation(locations[0], true);
 	}
 
+	public static event System.Action<string> OnArrived;
+
 	public void GoToLocation(string id)
 	{
 		GoToLocation(locations.FirstOrDefault(x => x.id == id), false);
@@ -49,6 +51,7 @@ public class MovementSystem : MonoBehaviour
 		{
             transform.position = location.target.position;
             transform.forward = location.target.forward;
+			OnArrived?.Invoke(CurrentLocation.id);
 		}
 		else
 		{
@@ -63,13 +66,19 @@ public class MovementSystem : MonoBehaviour
 				transform.forward = CurrentLocation.target.forward;
 
 				Moving = false;
+
+				OnArrived?.Invoke(CurrentLocation.id);
 			});
 		}
 	}
 
 	private void Update()
 	{
-		if (CurrentLocation.canRotate && !Moving)
+		bool canLookAround = CurrentLocation.canRotate && !Moving;
+
+		Cursor.lockState = canLookAround ? CursorLockMode.Confined : CursorLockMode.None; 
+
+		if (canLookAround)
 		{
 			float mouseX = Input.GetAxis("Mouse X");
 			transform.Rotate(Vector3.up, mouseX * camRotateSpeed * Time.deltaTime, Space.World);

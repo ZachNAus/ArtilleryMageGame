@@ -31,6 +31,8 @@ public class SpellCaster : MonoBehaviour
     void Awake()
     {
         Instance = this;
+
+        MovementSystem.OnArrived += x => ClearCasting();
     }
 
     void Start()
