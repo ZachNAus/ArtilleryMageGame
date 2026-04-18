@@ -1,0 +1,144 @@
+using Sirenix.OdinInspector;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class SpellCaster : MonoBehaviour
+{
+    [SerializeField] List<SpellData> spellPool = new List<SpellData>();
+    [SerializeField] LocationDict locations = new LocationDict();
+
+    [SerializeField] MovementSystem movement;
+
+    [System.Serializable]
+    class LocationDict : SerializableDictionary<LocationList, Transform> { }
+
+    public static SpellCaster Instance { get; private set; }
+
+    [ReadOnly]
+    public List<KeyCode> activelyCasting = new List<KeyCode>();
+
+    public event Action<KeyCode> OnInputAdded;
+    public event Action OnCastingCleared;
+    public event Action<LocationList, SpellData> OnCastedSpell;
+
+    HashSet<KeyCode> watchedKeys = new HashSet<KeyCode>();
+    float timeSinceLastInput = 0f;
+    const float castingTimeout = 2f;
+
+    void Awake()
+    {
+        Instance = this;
+    }
+
+    void Start()
+    {
+        foreach (SpellData spell in spellPool)
+            foreach (KeyCode key in spell.inputs)
+			{
+                if(watchedKeys.Contains(key) == false)
+                    watchedKeys.Add(key);
+			}
+    }
+
+    public void Update()
+    {
+        if (movement.CurrentLocation.canCast && !movement.Moving)
+        {
+            foreach (KeyCode key in watchedKeys)
+            {
+                if (Input.GetKeyDown(key))
+                {
+                    activelyCasting.Add(key);
+                    timeSinceLastInput = 0f;
+                    OnInputAdded?.Invoke(key);
+                    CheckSpells();
+                    break;
+                }
+            }
+
+            if (activelyCasting.Count > 0)
+            {
+                if (timeSinceLastInput >= castingTimeout)
+                    ClearCasting();
+                else
+                    timeSinceLastInput += Time.deltaTime;
+            }
+        }
+    }
+
+    void CheckSpells()
+    {
+        foreach (SpellData spell in spellPool)
+        {
+            if (activelyCasting.SequenceEqual(spell.inputs))
+            {
+                CastSpell(spell);
+                ClearCasting();
+                return;
+            }
+        }
+
+        bool anyPrefix = spellPool.Any(spell => IsPrefix(activelyCasting, spell.inputs));
+        if (!anyPrefix)
+            ClearCasting();
+    }
+
+    bool IsPrefix(List<KeyCode> candidate, List<KeyCode> full)
+        => candidate.Count <= full.Count
+        && candidate.SequenceEqual(full.Take(candidate.Count));
+
+    void ClearCasting()
+    {
+        activelyCasting.Clear();
+        timeSinceLastInput = 0f;
+        OnCastingCleared?.Invoke();
+    }
+
+    LocationList GetClosestLookedAtLocation()
+    {
+        LocationList closest = default;
+        float smallestAngle = float.MaxValue;
+
+        foreach (var kvp in locations)
+        {
+            Vector3 dirToLocation = (kvp.Value.position - movement.transform.position).normalized;
+            float angle = Vector3.Angle(movement.transform.forward, dirToLocation);
+            if (angle < smallestAngle)
+            {
+                smallestAngle = angle;
+                closest = kvp.Key;
+            }
+        }
+
+        return closest;
+    }
+
+    void CastSpell(SpellData spell)
+    {
+        LocationList location = GetClosestLookedAtLocation();
+
+        if (spell.visualEffects != null && locations.TryGetValue(location, out Transform spawnPoint))
+		{
+            var inst = Instantiate(spell.visualEffects, spawnPoint.position, spawnPoint.rotation);
+            inst.Play();
+
+            StartCoroutine(Co_Wait(spell.particleAliveTime, () => 
+            {
+                inst.Stop();
+                Destroy(inst.gameObject, spell.particleAliveTime);
+            }));
+		}
+
+        OnCastedSpell?.Invoke(location, spell);
+    }
+
+    IEnumerator Co_Wait(float seconds, Action onComplete)
+	{
+        yield return new WaitForSeconds(seconds);
+
+        onComplete?.Invoke();
+	}
+}

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
-  m_Name: RQST_FarmerB
+  m_Name: RQST_HunterA
   m_EditorClassIdentifier: 
-  personRequesting: Farmer
-  requestDetails: Some kinda illness has been sweepin' through the <color="yellow">farms</color>.
-    Can you cast some purification magic?
-  timeToComplete: 60
-  desiredLocation: 0
+  personRequesting: Hunter
+  requestDetails: Some kind of demonic magic is causing the <color="green">forest</color>
+    to grow out of control. I can't get anything done like this. Please assist!
+  timeToComplete: 30
+  desiredLocation: 3
   spellsThatWork:
-  - {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
+  - {fileID: 11400000, guid: 114c633e10ea4bf4ab0561ff56704064, type: 2}
   instantFailSpells:
   - {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
   - {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}

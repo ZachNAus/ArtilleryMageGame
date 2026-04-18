@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_DemonB
   m_EditorClassIdentifier: 
   personRequesting: K1ngd0m S01dier
-  requestDetails: DESTRUCTION OF PATHETIC MORTAL SETTLEMENT REQUESTED. BECAUSE IT
-    HAS BEEN TAKEN. BY DEMONS.
+  requestDetails: DESTRUCTION OF PATHETIC MORTAL <color=#E39032>SETTLEMENT</color>
+    REQUESTED. BECAUSE IT HAS BEEN TAKEN. BY DEMONS.
   timeToComplete: 40
   desiredLocation: 2
   spellsThatWork:
