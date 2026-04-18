@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Mass Heal
   inputs: 13010000120100001401000011010000
-  visualEffects: {fileID: 0}
+  visualEffects: {fileID: 2899708158461106523, guid: c7d7a8b5ad583e14396999f005d84e40,
+    type: 3}
+  particleAliveTime: 5

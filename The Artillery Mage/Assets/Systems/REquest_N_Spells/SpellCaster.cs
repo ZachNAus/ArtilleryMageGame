@@ -120,7 +120,7 @@ public class SpellCaster : MonoBehaviour
 
     void CastSpell(SpellData spell)
     {
-        LocationList location = GetClosestLookedAtLocation();
+        LocationList location = GetClosestLookedAtLocation();//
 
         if (spell.visualEffects != null && locations.TryGetValue(location, out Transform spawnPoint))
 		{
