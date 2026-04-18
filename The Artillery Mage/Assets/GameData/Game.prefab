@@ -640,6 +640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2411809789754726332}
   - component: {fileID: 7722710109905235751}
+  - component: {fileID: 994165138920982230}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -676,6 +677,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockMovingIfActive:
   - {fileID: 8269193723990834409}
+--- !u!114 &994165138920982230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324787421701821013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d44a45b2d73d1a41b58f1b50fa783a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestPool:
+  - {fileID: 11400000, guid: c308db1017e9e524188d8f1ed36f318b, type: 2}
+  - {fileID: 11400000, guid: fb825ded597be254da3acd28f4ef6e48, type: 2}
+  - {fileID: 11400000, guid: 70d1727c99dd1e947b468d2deba47504, type: 2}
+  - {fileID: 11400000, guid: 0a4129efbf6318441b9ab54d5eab4992, type: 2}
+  - {fileID: 11400000, guid: 76b27e8d07f72694aaf39e07b46b44dc, type: 2}
+  - {fileID: 11400000, guid: 45a36cd872beedd4a920e56663c9d029, type: 2}
+  startGameDelay: 6
+  requestPopupTime: {x: 20, y: 35}
+  currentlyActiveRequests: []
 --- !u!1 &7390844643407947099
 GameObject:
   m_ObjectHideFlags: 0
