@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
   m_Name: RQST_SoldierB
   m_EditorClassIdentifier: 
-  name: Soldier B
   personRequesting: Kingdom Soldier
-  requestDetails: Demonic presence at the Demon Gate is rising. We'd like you to
-    provide support magic to power up our forces there.
+  requestDetails: Demonic presence at the <color="purple">Demon Gate</color> is rising.
+    We'd like you to provide support magic to power up our forces there.
   timeToComplete: 40
   desiredLocation: 4
   spellsThatWork:

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
   m_Name: RQST_SoldierA
   m_EditorClassIdentifier: 
-  name: Soldier A
   personRequesting: Kingdom Soldier
-  requestDetails: We've received word that a demon camp has popped up in the forest.
+  requestDetails: We've received word that a demon camp has popped up in the <color="green">forest</color>.
     Requesting long-range attack magic to clear them out.
   timeToComplete: 60
   desiredLocation: 3

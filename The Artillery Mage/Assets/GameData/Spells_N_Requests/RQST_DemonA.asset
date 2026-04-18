@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_DemonA
   m_EditorClassIdentifier: 
   personRequesting: K1ngd0m S01dier
-  requestDetails: STRONG AND HANDSOME DEMONS CAMPING AT VOLCANO. ERADICATE THEM WITHOUT
-    MERCY.
+  requestDetails: STRONG AND HANDSOME DEMONS CAMPING AT <color="red">VOLCANO</color>.
+    ERADICATE THEM WITHOUT MERCY.
   timeToComplete: 60
   desiredLocation: 5
   spellsThatWork:

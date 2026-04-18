@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: RQST_FarmerA
   m_EditorClassIdentifier: 
   personRequesting: Farmer
-  requestDetails: My crops are struggling and I'm worried about our harvest this
-    year. Could you please use that fancy magic of yours to help us out?
+  requestDetails: My <color="yellow">crops</color> are struggling and I'm worried
+    about our harvest this year. Could you please use that fancy magic of yours to
+    help us out?
   timeToComplete: 60
   desiredLocation: 0
   spellsThatWork:

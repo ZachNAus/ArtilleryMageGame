@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_FarmerB
   m_EditorClassIdentifier: 
   personRequesting: Farmer
-  requestDetails: Some kinda illness has been sweepin' through the farms. Can you
-    cast some purification magic?
+  requestDetails: Some kinda illness has been sweepin' through the <color="yellow">farms</color>.
+    Can you cast some purification magic?
   timeToComplete: 60
   desiredLocation: 0
   spellsThatWork:
