@@ -52,6 +52,7 @@ public class RequestManager : MonoBehaviour
 		pool.AddRange(requestPool.Where(x =>
 			currentlyActiveRequests.All(y => y.request.desiredLocation != x.desiredLocation)
 			&& GameManager.Instance.GetGoodPercent(x.desiredLocation).MeetsEquation(x.percentGoodEquation, x.percentGoodNeeded)
+			&& HasDemons(x.desiredLocation)
 		));
 
 		if (pool.Count > 0)
@@ -128,6 +129,12 @@ public class RequestManager : MonoBehaviour
 			OnRequestPassed?.Invoke(cleanup.request, triggeredOutcome);
 			OnRequestRemoved?.Invoke(cleanup.request);
 		}
+	}
+
+	bool HasDemons(LocationList location)
+	{
+		GameManager.Instance.GetUnits(location, out int _, out int bad);
+		return bad > 0;
 	}
 
 #if UNITY_EDITOR
