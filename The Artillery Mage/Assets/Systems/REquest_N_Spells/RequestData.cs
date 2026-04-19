@@ -21,10 +21,21 @@ public class RequestData : ScriptableObject
     [TextArea(3,10)]
     public string requestDetails;
     public float timeToComplete;
-    [Space]
-
+    
+    [Header("Reqs")]
     public LocationList desiredLocation;
 
+    public MathEquation percentGoodEquation;
+    [Range(0,1f)]
+    public float percentGoodNeeded;
+
+
+    [Header("Outcomes")]
     public List<SpellData> spellsThatWork = new List<SpellData>();
     public List<SpellData> instantFailSpells = new List<SpellData>();
+
+    [Space]
+
+    public int goodUnitsAlter;
+    public int badUnitsAlter;
 }

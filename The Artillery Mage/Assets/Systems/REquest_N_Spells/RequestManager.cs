@@ -50,7 +50,10 @@ public class RequestManager : MonoBehaviour
 	public void SpawnRequest()
 	{
 		var pool = new List<RequestData>();
-		pool.AddRange(requestPool.Where(x => currentlyActiveRequests.All(y => y.request.desiredLocation != x.desiredLocation)));
+		pool.AddRange(requestPool.Where(x =>
+			currentlyActiveRequests.All(y => y.request.desiredLocation != x.desiredLocation)
+			&& GameManager.Instance.GetGoodPercent(x.desiredLocation).MeetsEquation(x.percentGoodEquation, x.percentGoodNeeded)
+		));
 
 		var rand = pool.GetRandom();
 
