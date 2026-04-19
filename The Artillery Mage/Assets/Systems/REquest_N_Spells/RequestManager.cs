@@ -46,14 +46,24 @@ public class RequestManager : MonoBehaviour
 		SpellCaster.Instance.OnCastedSpell += OnSpellCasted;
 	}
 
+	bool IsInPool(RequestData x)
+	{
+		if (!currentlyActiveRequests.All(y => y.request.desiredLocation != x.desiredLocation)) //REquest not in area with request already
+			return false;
+
+		if (!GameManager.Instance.GetGoodPercent(x.desiredLocation).MeetsEquation(x.percentGoodEquation, x.percentGoodNeeded))
+			return false;
+
+		if (!HasDemons(x.desiredLocation))
+			return false;
+
+		return true;
+	}
+
 	public void SpawnRequest()
 	{
 		var pool = new List<RequestData>();
-		pool.AddRange(requestPool.Where(x =>
-			currentlyActiveRequests.All(y => y.request.desiredLocation != x.desiredLocation)
-			&& GameManager.Instance.GetGoodPercent(x.desiredLocation).MeetsEquation(x.percentGoodEquation, x.percentGoodNeeded)
-			&& HasDemons(x.desiredLocation)
-		));
+		pool.AddRange(requestPool.Where(x => IsInPool(x)));
 
 		if (pool.Count > 0)
 		{
@@ -69,9 +79,15 @@ public class RequestManager : MonoBehaviour
 			OnRequestAdded?.Invoke(rand);
 
 			if (requestPopupTime.y > requestPopupTime.x && UnityEngine.Random.value > 0.5f)
+			{
 				requestPopupTime.y -= 1;
+				requestPopupTime.y = Mathf.Clamp(requestPopupTime.y, requestPopupTime.y-1, 0);
+			}
 			else
+			{
 				requestPopupTime.x -= 1;
+				requestPopupTime.x = Mathf.Clamp(requestPopupTime.x, requestPopupTime.x - 1, 0);
+			}
 		}
 
 		timeTillNextSpawn = UnityEngine.Random.Range(requestPopupTime.x, requestPopupTime.y);

@@ -25,11 +25,6 @@ MonoBehaviour:
     - locationToAltarUnits: 3
       goodUnitsAlter: 3
       badUnitsAlter: -1
-  - spell: {fileID: 11400000, guid: 8e4f890f55705c140b27559d41131c23, type: 2}
-    effects:
-    - locationToAltarUnits: 3
-      goodUnitsAlter: 1
-      badUnitsAlter: -1
   - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
     effects:
     - locationToAltarUnits: 3
