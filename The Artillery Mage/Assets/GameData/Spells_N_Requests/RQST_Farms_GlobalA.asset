@@ -10,33 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
-  m_Name: RQST_Farms_DemonA
+  m_Name: RQST_Farms_GlobalA
   m_EditorClassIdentifier: 
-  personRequesting: K1ngd0m S01dier
-  requestDetails: DISEASE AND ROT HAVE INFECTED THE SUPPLY OF FOOD. CLEANSE THE <color="yellow">FARMS</color>
-    IN BEAUTIFUL FIRE, THAT THEY MAY GROW BACK STRONGER.
-  timeToComplete: 55
+  personRequesting: Farmer
+  requestDetails: My <color="yellow">crops</color> are struggling and our soldiers
+    need this food. Could you please use that fancy magic of yours to help?
+  timeToComplete: 60
   desiredLocation: 0
   percentGoodEquation: 0
-  percentGoodNeeded: 0.9
+  percentGoodNeeded: 0
   outcomes:
-  - spell: {fileID: 11400000, guid: 2412411c8f6a78a4aa6719160b3cc15d, type: 2}
+  - spell: {fileID: 11400000, guid: 26669fc883bed7a4a9b90351f1f1f1f8, type: 2}
     effects:
-    - locationToAltarUnits: 4
-      goodUnitsAlter: 0
-      badUnitsAlter: -2
+    - locationToAltarUnits: 0
+      goodUnitsAlter: 4
+      badUnitsAlter: 0
+  - spell: {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
+    effects:
+    - locationToAltarUnits: 0
+      goodUnitsAlter: 2
+      badUnitsAlter: 0
   - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
     effects:
     - locationToAltarUnits: 0
-      goodUnitsAlter: -3
-      badUnitsAlter: 1
+      goodUnitsAlter: -2
+      badUnitsAlter: 0
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
     effects:
     - locationToAltarUnits: 0
-      goodUnitsAlter: -6
-      badUnitsAlter: 2
+      goodUnitsAlter: -4
+      badUnitsAlter: -1
   - spell: {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     effects:
     - locationToAltarUnits: 0
-      goodUnitsAlter: -8
-      badUnitsAlter: -2
+      goodUnitsAlter: -7
+      badUnitsAlter: -5
