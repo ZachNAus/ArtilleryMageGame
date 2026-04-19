@@ -18,9 +18,12 @@ MonoBehaviour:
     help. Please assist!
   timeToComplete: 30
   desiredLocation: 3
-  spellsThatWork:
-  - {fileID: 11400000, guid: 114c633e10ea4bf4ab0561ff56704064, type: 2}
-  instantFailSpells:
-  - {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
-  - {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
-  - {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
+  percentGoodEquation: 0
+  percentGoodNeeded: 0.2
+  outcomes:
+  - spell: {fileID: 11400000, guid: 114c633e10ea4bf4ab0561ff56704064, type: 2}
+    effects: []
+  - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
+    effects: []
+  - spell: {fileID: 11400000, guid: 8d052a212c46b2d48b1e655a43ac8708, type: 2}
+    effects: []

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9734c4785cf27144f83873def292b046, type: 3}
   m_Name: SPL_Report
   m_EditorClassIdentifier: 
-  name: Purification
-  inputs: 1301000012010000140100001301000011010000
+  name: Report
+  inputs: 110100001101000012010000
   visualEffects: {fileID: 2899708158461106523, guid: c7d7a8b5ad583e14396999f005d84e40,
     type: 3}
   particleAliveTime: 5

@@ -17,9 +17,14 @@ MonoBehaviour:
     We'd like you to provide support magic to power up our forces there.
   timeToComplete: 40
   desiredLocation: 4
-  spellsThatWork:
-  - {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
-  instantFailSpells:
-  - {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
-  - {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
-  - {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
+  percentGoodEquation: 0
+  percentGoodNeeded: 0.1
+  outcomes:
+  - spell: {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
+    effects: []
+  - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
+    effects: []
+  - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
+    effects: []
+  - spell: {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
+    effects: []
