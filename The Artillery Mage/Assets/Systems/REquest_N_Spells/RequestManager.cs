@@ -67,6 +67,11 @@ public class RequestManager : MonoBehaviour
 
 			currentlyActiveRequests.Add(r);
 			OnRequestAdded?.Invoke(rand);
+
+			if (requestPopupTime.y > requestPopupTime.x && UnityEngine.Random.value > 0.5f)
+				requestPopupTime.y -= 1;
+			else
+				requestPopupTime.x -= 1;
 		}
 
 		timeTillNextSpawn = UnityEngine.Random.Range(requestPopupTime.x, requestPopupTime.y);
