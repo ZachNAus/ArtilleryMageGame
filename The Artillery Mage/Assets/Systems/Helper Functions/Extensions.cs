@@ -104,15 +104,15 @@ public static class Extensions
 		switch (equation)
 		{
 			case MathEquation.EqualTo:
-				return f == compareValue;
+				return Mathf.Approximately(f, compareValue);
 			case MathEquation.LessThan:
 				return f < compareValue;
 			case MathEquation.LessThanEqualTo:
-				return f <= compareValue;
+				return f < compareValue || Mathf.Approximately(f, compareValue);
 			case MathEquation.MoreThan:
 				return f > compareValue;
 			case MathEquation.MoreThanEqualTo:
-				return f >= compareValue;
+				return f > compareValue || Mathf.Approximately(f, compareValue);
 		}
 
 		return false;
