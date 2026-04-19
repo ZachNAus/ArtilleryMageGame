@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Counterspell
   inputs: 13010000140100001201000011010000
-  visualEffects: {fileID: 2899708158461106523, guid: c7d7a8b5ad583e14396999f005d84e40,
-    type: 3}
   particleAliveTime: 5
+  audio:
+  - {fileID: 8300000, guid: dd1505de9c9e7b043b06de12998f29a8, type: 3}
