@@ -76,12 +76,19 @@ public class MovementSystem : MonoBehaviour
 	{
 		bool canLookAround = CurrentLocation.canRotate && !Moving;
 
-		Cursor.lockState = canLookAround ? CursorLockMode.Confined : CursorLockMode.None; 
+		Cursor.lockState = canLookAround ? CursorLockMode.Confined : CursorLockMode.None;
 
 		if (canLookAround)
 		{
 			float mouseX = Input.GetAxis("Mouse X");
 			transform.Rotate(Vector3.up, mouseX * camRotateSpeed * Time.deltaTime, Space.World);
+		}
+
+		if (Input.GetKeyDown(KeyCode.Space) && !Moving)
+		{
+			int currentIndex = System.Array.IndexOf(locations, CurrentLocation);
+			int nextIndex = (currentIndex + 1) % locations.Length;
+			GoToLocation(locations[nextIndex], false);
 		}
 	}
 }
