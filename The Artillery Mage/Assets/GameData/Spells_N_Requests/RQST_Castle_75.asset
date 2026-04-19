@@ -18,14 +18,14 @@ MonoBehaviour:
     success.
   timeToComplete: 35
   desiredLocation: 1
-  percentGoodEquation: 1
+  percentGoodEquation: 3
   percentGoodNeeded: 0.75
   outcomes:
   - spell: {fileID: 11400000, guid: 8d052a212c46b2d48b1e655a43ac8708, type: 2}
     effects:
     - locationToAltarUnits: 1
       goodUnitsAlter: 0
-      badUnitsAlter: -2
+      badUnitsAlter: -3
     - locationToAltarUnits: 0
       goodUnitsAlter: 3
       badUnitsAlter: 0

@@ -17,7 +17,7 @@ MonoBehaviour:
     our scouts are having trouble sneaking by. Help them out with some natural cover.
   timeToComplete: 30
   desiredLocation: 3
-  percentGoodEquation: 0
+  percentGoodEquation: 2
   percentGoodNeeded: 0.4
   outcomes:
   - spell: {fileID: 11400000, guid: 26669fc883bed7a4a9b90351f1f1f1f8, type: 2}

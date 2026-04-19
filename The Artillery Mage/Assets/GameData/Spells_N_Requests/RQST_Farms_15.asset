@@ -17,14 +17,14 @@ MonoBehaviour:
     high! Bolster our troops so we can rally and push the demons back!
   timeToComplete: 50
   desiredLocation: 0
-  percentGoodEquation: 1
+  percentGoodEquation: 3
   percentGoodNeeded: 0.15
   outcomes:
   - spell: {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
     effects:
     - locationToAltarUnits: 0
-      goodUnitsAlter: 6
-      badUnitsAlter: 0
+      goodUnitsAlter: 5
+      badUnitsAlter: -3
   - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
     effects:
     - locationToAltarUnits: 0

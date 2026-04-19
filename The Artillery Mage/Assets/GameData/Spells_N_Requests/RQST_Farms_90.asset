@@ -17,7 +17,7 @@ MonoBehaviour:
     We're hoping you could slow them down without anything too destructive.
   timeToComplete: 60
   desiredLocation: 0
-  percentGoodEquation: 1
+  percentGoodEquation: 3
   percentGoodNeeded: 0.9
   outcomes:
   - spell: {fileID: 11400000, guid: 26669fc883bed7a4a9b90351f1f1f1f8, type: 2}

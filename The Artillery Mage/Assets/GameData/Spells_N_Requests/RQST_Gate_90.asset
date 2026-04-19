@@ -17,7 +17,7 @@ MonoBehaviour:
     Prevent our forces from falling to demonic magic as they approach!
   timeToComplete: 45
   desiredLocation: 4
-  percentGoodEquation: 0
+  percentGoodEquation: 2
   percentGoodNeeded: 0.1
   outcomes:
   - spell: {fileID: 11400000, guid: 114c633e10ea4bf4ab0561ff56704064, type: 2}

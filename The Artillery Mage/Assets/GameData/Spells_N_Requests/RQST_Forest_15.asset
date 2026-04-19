@@ -17,7 +17,7 @@ MonoBehaviour:
     Warp us behind enemy lines and we'll take them out!
   timeToComplete: 30
   desiredLocation: 3
-  percentGoodEquation: 0
+  percentGoodEquation: 2
   percentGoodNeeded: 0.85
   outcomes:
   - spell: {fileID: 11400000, guid: 8d052a212c46b2d48b1e655a43ac8708, type: 2}

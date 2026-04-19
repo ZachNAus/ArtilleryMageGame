@@ -18,7 +18,7 @@ MonoBehaviour:
     help. Please assist!
   timeToComplete: 30
   desiredLocation: 3
-  percentGoodEquation: 0
+  percentGoodEquation: 2
   percentGoodNeeded: 0.25
   outcomes:
   - spell: {fileID: 11400000, guid: 114c633e10ea4bf4ab0561ff56704064, type: 2}
