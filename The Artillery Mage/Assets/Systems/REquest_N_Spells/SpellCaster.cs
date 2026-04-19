@@ -178,4 +178,20 @@ public class SpellCaster : MonoBehaviour
 
         onComplete?.Invoke();
 	}
+
+#if UNITY_EDITOR
+    [Button]
+    void DevAutofillSpellPool()
+    {
+        spellPool.Clear();
+        var guids = UnityEditor.AssetDatabase.FindAssets("t:SpellData");
+        foreach (var guid in guids)
+        {
+            var path = UnityEditor.AssetDatabase.GUIDToAssetPath(guid);
+            var asset = UnityEditor.AssetDatabase.LoadAssetAtPath<SpellData>(path);
+            if (asset != null) spellPool.Add(asset);
+        }
+        UnityEditor.EditorUtility.SetDirty(this);
+    }
+#endif
 }

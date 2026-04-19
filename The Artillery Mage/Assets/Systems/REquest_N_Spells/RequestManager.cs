@@ -127,4 +127,20 @@ public class RequestManager : MonoBehaviour
 			OnRequestRemoved?.Invoke(cleanup.request);
 		}
 	}
+
+#if UNITY_EDITOR
+	[Button]
+	void DevAutofillRequestPool()
+	{
+		requestPool = new List<RequestData>();
+		var guids = UnityEditor.AssetDatabase.FindAssets("t:RequestData");
+		foreach (var guid in guids)
+		{
+			var path = UnityEditor.AssetDatabase.GUIDToAssetPath(guid);
+			var asset = UnityEditor.AssetDatabase.LoadAssetAtPath<RequestData>(path);
+			if (asset != null) requestPool.Add(asset);
+		}
+		UnityEditor.EditorUtility.SetDirty(this);
+	}
+#endif
 }
