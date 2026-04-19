@@ -1215,7 +1215,10 @@ MonoBehaviour:
 
 
     Press ''Connect Orb''
-    to connect the signal and start the game.'
+    to connect the signal and start the game.
+
+    (we recommend you explore your
+    surroundings first)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
