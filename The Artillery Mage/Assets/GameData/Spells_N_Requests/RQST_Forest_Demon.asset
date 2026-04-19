@@ -25,6 +25,9 @@ MonoBehaviour:
     - locationToAltarUnits: 4
       goodUnitsAlter: 0
       badUnitsAlter: -2
+    - locationToAltarUnits: 3
+      goodUnitsAlter: 0
+      badUnitsAlter: -2
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
     effects:
     - locationToAltarUnits: 3
