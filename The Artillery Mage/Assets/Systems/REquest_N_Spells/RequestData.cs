@@ -38,6 +38,12 @@ public class RequestData : ScriptableObject
     {
         public SpellData spell;
 
+        public List<OutcomeAffect> effects = new List<OutcomeAffect>();
+    }
+
+    [System.Serializable]
+    public class OutcomeAffect
+    {
         public LocationList locationToAltarUnits;
         public int goodUnitsAlter;
         public int badUnitsAlter;
