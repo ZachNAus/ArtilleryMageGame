@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
-  m_Name: RQST_Farms_FarmerB
+  m_Name: RQST_Farms_GlobalB
   m_EditorClassIdentifier: 
   personRequesting: Farmer
-  requestDetails: Some kinda illness has been sweepin' through the <color="yellow">farms</color>.
-    Can you cast some purification magic?
+  requestDetails: Some kinda illness has been sweepin' through community at the <color="yellow">farms</color>.
+    Got anything to help us out?
   timeToComplete: 60
   desiredLocation: 0
   percentGoodEquation: 0
   percentGoodNeeded: 0
   outcomes:
-  - spell: {fileID: 11400000, guid: 8e4f890f55705c140b27559d41131c23, type: 2}
+  - spell: {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
     effects:
     - locationToAltarUnits: 0
       goodUnitsAlter: 3

@@ -10,33 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
-  m_Name: RQST_Farms_DemonA
+  m_Name: RQST_Farms_45
   m_EditorClassIdentifier: 
-  personRequesting: K1ngd0m S01dier
-  requestDetails: DISEASE AND ROT HAVE INFECTED THE SUPPLY OF FOOD. CLEANSE THE <color="yellow">FARMS</color>
-    IN BEAUTIFUL FIRE, THAT THEY MAY GROW BACK STRONGER.
-  timeToComplete: 55
+  personRequesting: Grand Magus
+  requestDetails: Our forces have been split and scattered across the farms. Please
+    assist with exfiltration.
+  timeToComplete: 40
   desiredLocation: 0
-  percentGoodEquation: 0
-  percentGoodNeeded: 0.9
+  percentGoodEquation: 1
+  percentGoodNeeded: 0.45
   outcomes:
-  - spell: {fileID: 11400000, guid: 2412411c8f6a78a4aa6719160b3cc15d, type: 2}
-    effects:
-    - locationToAltarUnits: 4
-      goodUnitsAlter: 0
-      badUnitsAlter: -2
   - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
     effects:
     - locationToAltarUnits: 0
-      goodUnitsAlter: -3
-      badUnitsAlter: 1
+      goodUnitsAlter: 1
+      badUnitsAlter: -3
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
     effects:
     - locationToAltarUnits: 0
-      goodUnitsAlter: -6
-      badUnitsAlter: 2
+      goodUnitsAlter: -2
+      badUnitsAlter: -3
   - spell: {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     effects:
     - locationToAltarUnits: 0
-      goodUnitsAlter: -8
-      badUnitsAlter: -2
+      goodUnitsAlter: -7
+      badUnitsAlter: -7

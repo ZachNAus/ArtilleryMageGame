@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
   m_Name: RQST_Castle_15
   m_EditorClassIdentifier: 
-  personRequesting: Grand Magus
-  requestDetails: Demons in the castle town are preparing their own large-scale attack
-    magic. Please help us!
-  timeToComplete: 80
+  personRequesting: The King
+  requestDetails: 'Our forces at the castle have been all but defeated. As your king,
+    I beseech you: Unleash the forbidden magic upon the demon forces!'
+  timeToComplete: 30
   desiredLocation: 1
-  percentGoodEquation: 0
-  percentGoodNeeded: 0.6
+  percentGoodEquation: 1
+  percentGoodNeeded: 0.15
   outcomes:
-  - spell: {fileID: 11400000, guid: 114c633e10ea4bf4ab0561ff56704064, type: 2}
+  - spell: {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     effects:
     - locationToAltarUnits: 1
-      goodUnitsAlter: 3
-      badUnitsAlter: -1
+      goodUnitsAlter: 0
+      badUnitsAlter: -10
   - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
     effects:
     - locationToAltarUnits: 1
@@ -33,10 +33,5 @@ MonoBehaviour:
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
     effects:
     - locationToAltarUnits: 1
-      goodUnitsAlter: -1
-      badUnitsAlter: -2
-  - spell: {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
-    effects:
-    - locationToAltarUnits: 1
-      goodUnitsAlter: -3
-      badUnitsAlter: -6
+      goodUnitsAlter: 0
+      badUnitsAlter: -4
