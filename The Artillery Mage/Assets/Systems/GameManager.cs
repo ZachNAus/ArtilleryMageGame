@@ -107,6 +107,12 @@ public class GameManager : MonoBehaviour
 
 	private void Update()
 	{
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.Quit();
+			return;
+		}
+
 		if (!GameFinished)
 			CurrentMana -= manaDrainPerSecond * Time.deltaTime;
 
