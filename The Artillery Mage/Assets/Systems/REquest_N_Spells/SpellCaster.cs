@@ -9,11 +9,14 @@ public class SpellCaster : MonoBehaviour
 {
     [SerializeField] List<SpellData> spellPool = new List<SpellData>();
     [SerializeField] LocationDict locations = new LocationDict();
+    [SerializeField] LocationDisplayMap locationDisplays = new LocationDisplayMap();
 
     [SerializeField] MovementSystem movement;
 
     [System.Serializable]
     class LocationDict : SerializableDictionary<LocationList, Transform> { }
+    [System.Serializable]
+    class LocationDisplayMap : SerializableDictionary<LocationList, LocationWorldDisplay> { }
 
     public static SpellCaster Instance { get; private set; }
 
@@ -148,19 +151,10 @@ public class SpellCaster : MonoBehaviour
 
     void CastSpell(SpellData spell)
     {
-        LocationList location = GetClosestLookedAtLocation();//
+        LocationList location = GetClosestLookedAtLocation();
 
-        if (spell.visualEffects != null && locations.TryGetValue(location, out Transform spawnPoint))
-		{
-            var inst = Instantiate(spell.visualEffects, spawnPoint.position, spawnPoint.rotation);
-            inst.Play();
-
-            StartCoroutine(Co_Wait(spell.particleAliveTime, () => 
-            {
-                inst.Stop();
-                Destroy(inst.gameObject, spell.particleAliveTime);
-            }));
-		}
+        if (locationDisplays.TryGetValue(location, out LocationWorldDisplay display))
+            display.PlaySpellVFX(spell, spell.particleAliveTime);
 
         OnCastedSpell?.Invoke(location, spell);
     }
@@ -171,13 +165,6 @@ public class SpellCaster : MonoBehaviour
         isCastingDelay = false;
         CastSpell(spell);
     }
-
-    IEnumerator Co_Wait(float seconds, Action onComplete)
-	{
-        yield return new WaitForSeconds(seconds);
-
-        onComplete?.Invoke();
-	}
 
 #if UNITY_EDITOR
     [Button]
