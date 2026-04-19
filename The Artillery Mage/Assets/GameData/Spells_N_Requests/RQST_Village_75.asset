@@ -12,19 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
   m_Name: RQST_Village_75
   m_EditorClassIdentifier: 
-  personRequesting: Kingdom Soldier
-  requestDetails: Urgent request! Please deliver a precision strike to the <color=#E39032>village</color>;
-    We've surrounded the demons but our position won't hold!
-  timeToComplete: 20
+  personRequesting: Grand Magus
+  requestDetails: We're evacuating parts of the village and sending in more soldiers.
+    Portals are requested for efficiency.
+  timeToComplete: 45
   desiredLocation: 2
   percentGoodEquation: 3
-  percentGoodNeeded: 0.3
+  percentGoodNeeded: 0.75
   outcomes:
+  - spell: {fileID: 11400000, guid: 8d052a212c46b2d48b1e655a43ac8708, type: 2}
+    effects:
+    - locationToAltarUnits: 0
+      goodUnitsAlter: 4
+      badUnitsAlter: 0
   - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
     effects:
     - locationToAltarUnits: 2
-      goodUnitsAlter: 0
-      badUnitsAlter: -4
+      goodUnitsAlter: 2
+      badUnitsAlter: -3
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
     effects:
     - locationToAltarUnits: 2
