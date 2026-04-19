@@ -47,9 +47,7 @@ public class SpellCaster : MonoBehaviour
     {
         Instance = this;
 
-        MovementSystem.Instance.OnArrived += OnArrivedClearCasting;
     }
-
     void OnArrivedClearCasting(string _) => ClearCasting();
 
     void OnDestroy()
@@ -59,6 +57,8 @@ public class SpellCaster : MonoBehaviour
 
     void Start()
     {
+        MovementSystem.Instance.OnArrived += OnArrivedClearCasting;
+
         foreach (SpellData spell in spellPool)
             foreach (KeyCode key in spell.inputs)
 			{
