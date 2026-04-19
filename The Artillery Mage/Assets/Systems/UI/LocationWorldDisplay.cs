@@ -19,6 +19,7 @@ public class LocationWorldDisplay : MonoBehaviour
 	[SerializeField] float tweenDuration = 1f;
 
 	float _lastPercent = -1f;
+	int _lastGood = -1, _lastBad = -1;
 
 	[SerializeField] SpellsToVFX vfxSetup = new SpellsToVFX();
 
@@ -37,23 +38,37 @@ public class LocationWorldDisplay : MonoBehaviour
 
 		liberationText.SetText($"{Mathf.Floor(percent*100)}% Liberated");
 
+		GameManager.Instance.GetUnits(location, out int good, out int bad);
+
 		if (_lastPercent >= 0f && percent != _lastPercent)
-			SpawnChangeIndicator(percent > _lastPercent);
+			SpawnChangeIndicator(percent > _lastPercent, good - _lastGood, bad - _lastBad);
+
 		_lastPercent = percent;
+		_lastGood = good;
+		_lastBad = bad;
 	}
 
-	void SpawnChangeIndicator(bool increased)
+	void SpawnChangeIndicator(bool increased, int deltaGood, int deltaBad)
 	{
 		if (changeIndicatorPrefab == null || indicatorHolder == null) return;
 
 		var inst = Instantiate(changeIndicatorPrefab, indicatorHolder);
-		var img = inst.GetComponent<Image>();
+		var img = inst.GetComponentInChildren<Image>();
 		var rect = inst.GetComponent<RectTransform>();
+		var label = inst.GetComponentInChildren<TMPro.TextMeshProUGUI>();
 
 		img.color = increased ? Color.green : Color.red;
 
 		if (!increased)
-			inst.transform.localEulerAngles = new Vector3(0f, 0f, 180f);
+			img.transform.localEulerAngles = new Vector3(0f, 0f, 180f);
+
+		if (label != null)
+		{
+			var lines = new System.Text.StringBuilder();
+			if (deltaBad != 0)  lines.AppendLine($"Demons: {deltaBad}");
+			if (deltaGood != 0) lines.Append($"Humans: {deltaGood}");
+			label.SetText(lines.ToString());
+		}
 
 		rect.DOAnchorPosY(rect.anchoredPosition.y + tweenDistance * (increased ? 1f : -1f), tweenDuration)
 			.SetEase(Ease.OutQuad);

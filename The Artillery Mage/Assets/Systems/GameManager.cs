@@ -169,6 +169,14 @@ public class GameManager : MonoBehaviour
 		return activeLocations[location].PercentGood;
 	}
 
+	public void GetUnits(LocationList location, out int good, out int bad)
+	{
+		good = bad = 0;
+		if (!activeLocations.ContainsKey(location)) return;
+		good = activeLocations[location].goodUnits;
+		bad = activeLocations[location].badUnits;
+	}
+
 	[Button]
 	public void StartGame()
 	{
