@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 	[SerializeField] float demonGrowthTimer = 10;
 	float timeTillDemonGrowth;
 
+	public bool GameStarted { get; private set; }
+
 	[SerializeField]
 	[ReadOnly]
 	ActiveLocations activeLocations = new ActiveLocations();
@@ -88,11 +90,14 @@ public class GameManager : MonoBehaviour
 	{
 		CurrentMana -= manaDrainPerSecond * Time.deltaTime;
 
-		timeTillDemonGrowth -= Time.deltaTime;
-
-		if (timeTillDemonGrowth <= 0)
+		if (GameStarted)
 		{
-			ExpandDemons();
+			timeTillDemonGrowth -= Time.deltaTime;
+
+			if (timeTillDemonGrowth <= 0)
+			{
+				ExpandDemons();
+			}
 		}
 	}
 
@@ -159,6 +164,12 @@ public class GameManager : MonoBehaviour
 	public float GetGoodPercent(LocationList location)
 	{
 		return activeLocations[location].PercentGood;
+	}
+
+	[Button]
+	public void StartGame()
+	{
+		GameStarted = true;
 	}
 
 	void LoseGame()
