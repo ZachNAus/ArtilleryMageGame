@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Demon Precision Strike
   inputs: 130100001301000011010000
-  visualEffects: {fileID: 2899708158461106523, guid: c7d7a8b5ad583e14396999f005d84e40,
-    type: 3}
   particleAliveTime: 5
+  audio:
+  - {fileID: 8300000, guid: 809d48845a8a81743ac035c01d166d37, type: 3}
