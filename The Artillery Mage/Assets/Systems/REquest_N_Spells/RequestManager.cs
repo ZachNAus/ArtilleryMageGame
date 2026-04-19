@@ -73,13 +73,15 @@ public class RequestManager : MonoBehaviour
 
 	private void Update()
 	{
-		if (GameManager.Instance.GameStarted)
+		if (GameManager.Instance.GameStarted && !GameManager.Instance.GameFinished)
 		{
 			timeTillNextSpawn -= Time.deltaTime;
 
 			if (timeTillNextSpawn <= 0)
 				SpawnRequest();
 		}
+
+		if (GameManager.Instance.GameFinished) return;
 
 		var cleanup = new List<ActiveRequestData>();
 		foreach (var r in currentlyActiveRequests)

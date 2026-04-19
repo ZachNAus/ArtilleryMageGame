@@ -2,6 +2,7 @@ using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class GameManager : MonoBehaviour
 	float timeTillDemonGrowth;
 
 	public bool GameStarted { get; private set; }
+	public bool GameFinished { get; private set; }
+
+	[SerializeField] UnityEvent onWin;
+	[SerializeField] UnityEvent onLose;
 
 	[SerializeField]
 	[ReadOnly]
@@ -87,13 +92,15 @@ public class GameManager : MonoBehaviour
 			AlterUnits(effect.locationToAltarUnits, true, effect.goodUnitsAlter);
 			AlterUnits(effect.locationToAltarUnits, false, effect.badUnitsAlter);
 		}
+		CheckWinLose();
 	}
 
 	private void Update()
 	{
-		CurrentMana -= manaDrainPerSecond * Time.deltaTime;
+		if (!GameFinished)
+			CurrentMana -= manaDrainPerSecond * Time.deltaTime;
 
-		if (GameStarted)
+		if (GameStarted && !GameFinished)
 		{
 			timeTillDemonGrowth -= Time.deltaTime;
 
@@ -146,12 +153,7 @@ public class GameManager : MonoBehaviour
 			}
 		}
 
-		// Lose if Castle is >80% demon
-		if (activeLocations.ContainsKey(LocationList.Castle) &&
-			activeLocations[LocationList.Castle].PercentGood < 0.2f)
-		{
-			LoseGame();
-		}
+		CheckWinLose();
 	}
 
 	public void AlterUnits(LocationList location, bool goodUnits, int amount)
@@ -177,14 +179,51 @@ public class GameManager : MonoBehaviour
 		bad = activeLocations[location].badUnits;
 	}
 
+	public int GetMaxBadUnits(LocationList location)
+	{
+		var info = GetLocationInfo(location);
+		return info != null ? info.maxBadUnits : 10;
+	}
+
 	[Button]
 	public void StartGame()
 	{
 		GameStarted = true;
 	}
 
+	void CheckWinLose()
+	{
+		if (GameFinished) return;
+
+		if (activeLocations.ContainsKey(LocationList.Castle) &&
+			activeLocations[LocationList.Castle].PercentGood < 0.2f)
+		{
+			LoseGame();
+			return;
+		}
+
+		if (activeLocations.ContainsKey(LocationList.DemonGate) &&
+			activeLocations[LocationList.DemonGate].PercentGood >= 0.8f)
+		{
+			WinGame();
+		}
+	}
+
+	void WinGame()
+	{
+		GameFinished = true;
+		onWin.Invoke();
+	}
+
 	void LoseGame()
 	{
+		GameFinished = true;
+		onLose.Invoke();
+	}
 
+	public void RestartGame()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene(
+			UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 	}
 }

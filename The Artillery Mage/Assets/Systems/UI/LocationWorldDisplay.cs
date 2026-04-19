@@ -13,6 +13,9 @@ public class LocationWorldDisplay : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI liberationText;
 
+	[SerializeField] Image goodUnitsBar;
+	[SerializeField] Image badUnitsBar;
+
 	[SerializeField] GameObject changeIndicatorPrefab;
 	[SerializeField] Transform indicatorHolder;
 	[SerializeField] float tweenDistance = 60f;
@@ -46,6 +49,10 @@ public class LocationWorldDisplay : MonoBehaviour
 		_lastPercent = percent;
 		_lastGood = good;
 		_lastBad = bad;
+
+		int maxUnits = GameManager.Instance.GetMaxBadUnits(location);
+		if (goodUnitsBar != null) goodUnitsBar.fillAmount = maxUnits > 0 ? good / (float)maxUnits : 0f;
+		if (badUnitsBar != null)  badUnitsBar.fillAmount  = maxUnits > 0 ? bad  / (float)maxUnits : 0f;
 	}
 
 	void SpawnChangeIndicator(bool increased, int deltaGood, int deltaBad)
