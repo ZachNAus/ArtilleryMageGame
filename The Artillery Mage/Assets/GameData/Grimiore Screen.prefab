@@ -8707,7 +8707,7 @@ MonoBehaviour:
 
     I should find the spell I need,
     memorise it, then move upstairs and cast it. I should also make sure to be looking
-    at the area I want to cast it as well.'
+    at the area I want to cast it.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
