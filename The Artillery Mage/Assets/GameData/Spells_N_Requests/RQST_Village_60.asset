@@ -12,19 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
   m_Name: RQST_Village_60
   m_EditorClassIdentifier: 
-  personRequesting: Kingdom Soldier
-  requestDetails: Urgent request! Please deliver a precision strike to the <color=#E39032>village</color>;
-    We've surrounded the demons but our position won't hold!
+  personRequesting: Kingdom General
+  requestDetails: The Hero is preparing to drive the demons out of the village. Requesting
+    support magic to bolster our strength.
   timeToComplete: 20
   desiredLocation: 2
   percentGoodEquation: 3
-  percentGoodNeeded: 0.3
+  percentGoodNeeded: 0.6
   outcomes:
+  - spell: {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
+    effects:
+    - locationToAltarUnits: 0
+      goodUnitsAlter: 1
+      badUnitsAlter: -4
   - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
     effects:
     - locationToAltarUnits: 2
       goodUnitsAlter: 0
-      badUnitsAlter: -4
+      badUnitsAlter: -3
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
     effects:
     - locationToAltarUnits: 2

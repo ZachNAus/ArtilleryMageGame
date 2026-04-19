@@ -27,16 +27,16 @@ MonoBehaviour:
       badUnitsAlter: -2
   - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
     effects:
-    - locationToAltarUnits: 0
+    - locationToAltarUnits: 5
       goodUnitsAlter: -3
       badUnitsAlter: 0
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
     effects:
-    - locationToAltarUnits: 0
+    - locationToAltarUnits: 5
       goodUnitsAlter: -4
       badUnitsAlter: 0
   - spell: {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     effects:
-    - locationToAltarUnits: 0
+    - locationToAltarUnits: 5
       goodUnitsAlter: -7
       badUnitsAlter: -2
