@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Village_GlobalB
   m_EditorClassIdentifier: 
   personRequesting: Kingdom Soldier
-  requestDetails: We've discovered a scouting party demons near the village. Take
-    them out before they get too close.
+  requestDetails: We've discovered a scouting party demons near the <color=#E39032>village</color>.
+    Take them out before they get too close.
   timeToComplete: 40
   desiredLocation: 2
   percentGoodEquation: 0

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: RQST_Castle_75
   m_EditorClassIdentifier: 
   personRequesting: Grand Magus
-  requestDetails: We're preparing to crush the demons at the castle in a pincer attack.
-    Please warp our forces behind enemy lines to guarantee success.
+  requestDetails: We're preparing to <color="blue">castle</color> the demons at the
+    castle in a pincer attack. Please warp our forces behind enemy lines to guarantee
+    success.
   timeToComplete: 35
   desiredLocation: 1
   percentGoodEquation: 1

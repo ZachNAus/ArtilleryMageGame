@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RQST_Castle_60
   m_EditorClassIdentifier: 
   personRequesting: Kingdom General
-  requestDetails: Many of our soldiers are wounded and have retreated to the castle.
+  requestDetails: Many of our soldiers are wounded and have retreated to the <color="blue">castle</color>.
     Wide-range healing magic would help us turn the tide!
   timeToComplete: 55
   desiredLocation: 1

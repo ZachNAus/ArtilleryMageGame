@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Village_90
   m_EditorClassIdentifier: 
   personRequesting: Kingdom General
-  requestDetails: Demons have been spotted on the edge of the village. Strike with
-    precision and power.
+  requestDetails: Demons have been spotted on the edge of the <color=#E39032>village</color>.
+    Strike with precision and power.
   timeToComplete: 75
   desiredLocation: 2
   percentGoodEquation: 3

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Village_GlobalA
   m_EditorClassIdentifier: 
   personRequesting: Concerned Villager
-  requestDetails: Some of my neighbours in the village have come down with some kind
-    of evil-looking disease. Can you please cure them?
+  requestDetails: Some of my neighbours in the <color=#E39032>village</color> have
+    come down with some kind of evil-looking disease. Can you please cure them?
   timeToComplete: 70
   desiredLocation: 2
   percentGoodEquation: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RQST_Village_15
   m_EditorClassIdentifier: 
   personRequesting: Kingdom General
-  requestDetails: We've identified a weakness in the demons formation at the village.
+  requestDetails: We've identified a weakness in the demons formation at the <color=#E39032>village</color>.
     If we can break their magical defenses, we might be able to push back!
   timeToComplete: 30
   desiredLocation: 2

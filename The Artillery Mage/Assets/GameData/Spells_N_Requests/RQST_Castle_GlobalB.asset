@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personRequesting: Grand Magus
   requestDetails: Our mages have detected the presence of demonic insurgents within
-    the castle. Dispel their magic so we may strike them down.
+    the <color="blue">castle</color>. Dispel their magic so we may strike them down.
   timeToComplete: 60
   desiredLocation: 1
   percentGoodEquation: 0

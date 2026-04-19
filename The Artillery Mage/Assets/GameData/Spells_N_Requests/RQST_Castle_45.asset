@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Castle_45
   m_EditorClassIdentifier: 
   personRequesting: Kingdom General
-  requestDetails: The demons have set our glorious castle town alight. Please use
-    your magic to extinguish the blaze!
+  requestDetails: The demons have set our glorious <color="blue">castle</color> town
+    alight. Please use your magic to extinguish the blaze!
   timeToComplete: 70
   desiredLocation: 1
   percentGoodEquation: 1

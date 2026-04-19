@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Village_75
   m_EditorClassIdentifier: 
   personRequesting: Grand Magus
-  requestDetails: We're evacuating parts of the village and sending in more soldiers.
-    Portals are requested for efficiency.
+  requestDetails: We're evacuating parts of the <color=#E39032>village</color> and
+    sending in more soldiers. Portals are requested for efficiency.
   timeToComplete: 45
   desiredLocation: 2
   percentGoodEquation: 3

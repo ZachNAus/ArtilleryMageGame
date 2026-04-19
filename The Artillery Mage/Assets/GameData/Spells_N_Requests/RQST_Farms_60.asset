@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RQST_Farms_60
   m_EditorClassIdentifier: 
   personRequesting: Scout Captain
-  requestDetails: We've discovered a small army of demons on our flank at the farms.
+  requestDetails: We've discovered a small army of demons on our flank at the <color="yellow">farms</color>.
     Take them out.
   timeToComplete: 50
   desiredLocation: 0
