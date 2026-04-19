@@ -74,6 +74,14 @@ public class GameManager : MonoBehaviour
 				badUnits  = info.startingBadUnits
 			};
 		}
+
+		RequestManager.Instance.OnRequestPassed += OnRequestPassed;
+	}
+
+	void OnRequestPassed(RequestData request, RequestData.Outcome outcome)
+	{
+		AlterUnits(request.desiredLocation, true, outcome.goodUnitsAlter);
+		AlterUnits(request.desiredLocation, false, outcome.badUnitsAlter);
 	}
 
 	private void Update()

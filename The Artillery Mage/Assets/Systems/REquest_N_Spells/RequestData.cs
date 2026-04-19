@@ -31,11 +31,13 @@ public class RequestData : ScriptableObject
 
 
     [Header("Outcomes")]
-    public List<SpellData> spellsThatWork = new List<SpellData>();
-    public List<SpellData> instantFailSpells = new List<SpellData>();
+    public List<Outcome> outcomes = new List<Outcome>();
 
-    [Space]
-
-    public int goodUnitsAlter;
-    public int badUnitsAlter;
+    [System.Serializable]
+    public class Outcome
+    {
+        public SpellData spell;
+        public int goodUnitsAlter;
+        public int badUnitsAlter;
+    }
 }
