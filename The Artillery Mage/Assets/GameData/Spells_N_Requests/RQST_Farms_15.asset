@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Farms_15
   m_EditorClassIdentifier: 
   personRequesting: Kingdom General
-  requestDetails: We're losing the farms, but morale is still high! Bolster our troops
-    so we can rally and push the demons back!
+  requestDetails: We're losing the <color="yellow">farms</color>, but morale is still
+    high! Bolster our troops so we can rally and push the demons back!
   timeToComplete: 50
   desiredLocation: 0
   percentGoodEquation: 1

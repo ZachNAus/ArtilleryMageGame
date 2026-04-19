@@ -10,28 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
-  m_Name: RQST_Farms_45
+  m_Name: RQST_Forest_30
   m_EditorClassIdentifier: 
-  personRequesting: Grand Magus
-  requestDetails: Our forces have been split and scattered across the <color="yellow">farms</color>.
-    Please assist with exfiltration.
-  timeToComplete: 40
-  desiredLocation: 0
-  percentGoodEquation: 1
-  percentGoodNeeded: 0.45
+  personRequesting: Kingdom General
+  requestDetails: Several key locations in the <color="green">forest</color>t have
+    been identified. Please provide long-range attack magic to assist our forces
+    in taking them.
+  timeToComplete: 30
+  desiredLocation: 3
+  percentGoodEquation: 0
+  percentGoodNeeded: 0.7
   outcomes:
   - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
     effects:
-    - locationToAltarUnits: 0
-      goodUnitsAlter: 1
-      badUnitsAlter: -3
+    - locationToAltarUnits: 3
+      goodUnitsAlter: 0
+      badUnitsAlter: -4
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
     effects:
-    - locationToAltarUnits: 0
+    - locationToAltarUnits: 3
       goodUnitsAlter: -2
-      badUnitsAlter: -3
+      badUnitsAlter: -4
   - spell: {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     effects:
-    - locationToAltarUnits: 0
-      goodUnitsAlter: -7
+    - locationToAltarUnits: 3
+      goodUnitsAlter: -5
       badUnitsAlter: -7

@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: RQST_Castle_15
   m_EditorClassIdentifier: 
   personRequesting: The King
-  requestDetails: 'Our forces at the castle have been all but defeated. As your king,
-    I beseech you: Unleash the forbidden magic upon the demon forces!'
+  requestDetails: 'Our forces at the <color="blue">castle</color> have been all but
+    defeated. As your king, I beseech you: Unleash the forbidden magic upon the demon
+    forces!'
   timeToComplete: 30
   desiredLocation: 1
   percentGoodEquation: 1

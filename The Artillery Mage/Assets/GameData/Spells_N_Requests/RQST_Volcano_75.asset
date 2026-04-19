@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Volcano_75
   m_EditorClassIdentifier: 
   personRequesting: Intelligence Officer
-  requestDetails: We've got reports of hidden supply caches at the volcano. Help
-    out our liberation efforts with some portals, yeah?
+  requestDetails: We've got reports of hidden supply caches at the <color="red">Volcano</color>.
+    Help out our liberation efforts with some portals, yeah?
   timeToComplete: 40
   desiredLocation: 5
   percentGoodEquation: 0

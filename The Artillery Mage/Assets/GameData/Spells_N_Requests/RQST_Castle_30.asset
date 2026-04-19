@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Castle_30
   m_EditorClassIdentifier: 
   personRequesting: Grand Magus
-  requestDetails: Demons in the castle town are preparing their own large-scale attack
-    magic. Please help us!
+  requestDetails: Demons in the <color="blue">castle</color> town are preparing their
+    own large-scale attack magic. Please help us!
   timeToComplete: 80
   desiredLocation: 1
   percentGoodEquation: 1

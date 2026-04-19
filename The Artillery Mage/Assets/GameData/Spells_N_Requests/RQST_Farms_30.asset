@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Farms_30
   m_EditorClassIdentifier: 
   personRequesting: Farmer
-  requestDetails: The crops are burnin', and we'll have nothin' left at this rate.
-    I'm beggin' ya, save our harvest!
+  requestDetails: The <color="yellow">farms</color> are burnin', and we'll have nothin'
+    left at this rate. I'm beggin' ya, save our harvest!
   timeToComplete: 30
   desiredLocation: 0
   percentGoodEquation: 1

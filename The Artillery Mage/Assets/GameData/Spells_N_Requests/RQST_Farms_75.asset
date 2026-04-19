@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Farms_75
   m_EditorClassIdentifier: 
   personRequesting: Intelligence Officer
-  requestDetails: We've detected traces of observation magic around the farms. Stop
-    it before the demons can find a strategic opportunity.
+  requestDetails: We've detected traces of observation magic around the <color="yellow">farms</color>.
+    Stop it before the demons can find a strategic opportunity.
   timeToComplete: 40
   desiredLocation: 0
   percentGoodEquation: 1

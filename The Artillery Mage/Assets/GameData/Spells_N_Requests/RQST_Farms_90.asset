@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Farms_90
   m_EditorClassIdentifier: 
   personRequesting: Kingdom General
-  requestDetails: Demonic forces are approaching the farms. We're hoping you could
-    slow them down without anything too destructive.
+  requestDetails: Demonic forces are approaching the <color="yellow">farms</color>.
+    We're hoping you could slow them down without anything too destructive.
   timeToComplete: 60
   desiredLocation: 0
   percentGoodEquation: 1

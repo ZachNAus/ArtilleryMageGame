@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Volcano_GlobalB
   m_EditorClassIdentifier: 
   personRequesting: Kingdom Soldier
-  requestDetails: The heat from the volcano is putting a damper on morale. Could
-    we request some cool rain to help us not burn to death?
+  requestDetails: The heat from the <color="red">Volcano</color> is putting a damper
+    on morale. Could we request some cool rain to help us not burn to death?
   timeToComplete: 65
   desiredLocation: 5
   percentGoodEquation: 2

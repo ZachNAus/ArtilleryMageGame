@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: RQST_Castle_GlobalA
   m_EditorClassIdentifier: 
   personRequesting: Castle Guard
-  requestDetails: Demons have spread a magical plague throughout the castle town,
-    infecting many of our citizens. Please purge this sickness.
+  requestDetails: Demons have spread a magical plague throughout the <color="blue">castle</color>
+    town, infecting many of our citizens. Please purge this sickness.
   timeToComplete: 90
   desiredLocation: 1
   percentGoodEquation: 0

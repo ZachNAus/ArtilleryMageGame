@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: RQST_Village_45
   m_EditorClassIdentifier: 
   personRequesting: Intelligence Officer
-  requestDetails: Demon forces are advancing through the village, but we believe
-    heavy rainfall will slow them and give us time for reinforcements to arrive.
-    You know what to do.
+  requestDetails: Demon forces are advancing through the <color=#E39032>village</color>,
+    but we believe heavy rainfall will slow them and give us time for reinforcements
+    to arrive. You know what to do.
   timeToComplete: 45
   desiredLocation: 2
   percentGoodEquation: 3
