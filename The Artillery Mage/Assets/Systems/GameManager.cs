@@ -177,6 +177,12 @@ public class GameManager : MonoBehaviour
 		bad = activeLocations[location].badUnits;
 	}
 
+	public int GetMaxBadUnits(LocationList location)
+	{
+		var info = GetLocationInfo(location);
+		return info != null ? info.maxBadUnits : 10;
+	}
+
 	[Button]
 	public void StartGame()
 	{
