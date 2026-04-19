@@ -11,7 +11,5 @@ public class SpellData : ScriptableObject
 	public List<KeyCode> inputs = new List<KeyCode>();
 
 	[Header("FX")]
-	public VisualEffect visualEffects;
-
 	public float particleAliveTime;
 }
