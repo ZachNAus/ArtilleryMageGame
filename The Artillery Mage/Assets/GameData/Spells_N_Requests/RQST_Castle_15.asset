@@ -17,7 +17,7 @@ MonoBehaviour:
     I beseech you: Unleash the forbidden magic upon the demon forces!'
   timeToComplete: 30
   desiredLocation: 1
-  percentGoodEquation: 0
+  percentGoodEquation: 1
   percentGoodNeeded: 0.15
   outcomes:
   - spell: {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}

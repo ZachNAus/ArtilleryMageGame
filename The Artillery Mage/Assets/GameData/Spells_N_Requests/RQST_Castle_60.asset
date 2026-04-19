@@ -17,7 +17,7 @@ MonoBehaviour:
     Wide-range healing magic would help us turn the tide!
   timeToComplete: 55
   desiredLocation: 1
-  percentGoodEquation: 0
+  percentGoodEquation: 1
   percentGoodNeeded: 0.6
   outcomes:
   - spell: {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}

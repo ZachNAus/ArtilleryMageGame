@@ -17,7 +17,7 @@ MonoBehaviour:
     your magic to extinguish the blaze!
   timeToComplete: 70
   desiredLocation: 1
-  percentGoodEquation: 0
+  percentGoodEquation: 1
   percentGoodNeeded: 0.45
   outcomes:
   - spell: {fileID: 11400000, guid: 26669fc883bed7a4a9b90351f1f1f1f8, type: 2}

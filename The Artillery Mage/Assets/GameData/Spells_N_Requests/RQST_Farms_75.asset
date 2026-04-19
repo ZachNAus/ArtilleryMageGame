@@ -17,7 +17,7 @@ MonoBehaviour:
     it before the demons can find a strategic opportunity.
   timeToComplete: 40
   desiredLocation: 0
-  percentGoodEquation: 0
+  percentGoodEquation: 1
   percentGoodNeeded: 0.75
   outcomes:
   - spell: {fileID: 11400000, guid: 114c633e10ea4bf4ab0561ff56704064, type: 2}

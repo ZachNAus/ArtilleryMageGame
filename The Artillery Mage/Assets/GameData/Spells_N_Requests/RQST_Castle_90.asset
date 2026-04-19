@@ -17,7 +17,7 @@ MonoBehaviour:
     Requesting precision attack magic to strike the heart of their army.
   timeToComplete: 50
   desiredLocation: 1
-  percentGoodEquation: 0
+  percentGoodEquation: 1
   percentGoodNeeded: 0.9
   outcomes:
   - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
