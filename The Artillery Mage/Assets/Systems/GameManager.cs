@@ -82,8 +82,8 @@ public class GameManager : MonoBehaviour
 
 	void OnRequestPassed(RequestData request, RequestData.Outcome outcome)
 	{
-		AlterUnits(request.desiredLocation, true, outcome.goodUnitsAlter);
-		AlterUnits(request.desiredLocation, false, outcome.badUnitsAlter);
+		AlterUnits(outcome.locationToAltarUnits, true, outcome.goodUnitsAlter);
+		AlterUnits(outcome.locationToAltarUnits, false, outcome.badUnitsAlter);
 	}
 
 	private void Update()

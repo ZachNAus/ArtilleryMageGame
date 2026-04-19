@@ -37,6 +37,8 @@ public class RequestData : ScriptableObject
     public class Outcome
     {
         public SpellData spell;
+
+        public LocationList locationToAltarUnits;
         public int goodUnitsAlter;
         public int badUnitsAlter;
     }
