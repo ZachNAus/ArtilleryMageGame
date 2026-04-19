@@ -23,8 +23,7 @@ public class RequestManager : MonoBehaviour
 	public event Action<RequestData> OnRequestRemoved;
 
 	public event Action<RequestData> OnRequestExpired;
-	public event Action<RequestData> OnRequestFailed;
-	public event Action<RequestData> OnRequestPassed;
+	public event Action<RequestData, RequestData.Outcome> OnRequestPassed;
 
 	[System.Serializable]
 	public class ActiveRequestData
@@ -55,16 +54,19 @@ public class RequestManager : MonoBehaviour
 			&& GameManager.Instance.GetGoodPercent(x.desiredLocation).MeetsEquation(x.percentGoodEquation, x.percentGoodNeeded)
 		));
 
-		var rand = pool.GetRandom();
-
-		ActiveRequestData r = new ActiveRequestData()
+		if (pool.Count > 0)
 		{
-			request = rand,
-			timeLeft = rand.timeToComplete
-		};
+			var rand = pool.GetRandom();
 
-		currentlyActiveRequests.Add(r);
-		OnRequestAdded?.Invoke(rand);
+			ActiveRequestData r = new ActiveRequestData()
+			{
+				request = rand,
+				timeLeft = rand.timeToComplete
+			};
+
+			currentlyActiveRequests.Add(r);
+			OnRequestAdded?.Invoke(rand);
+		}
 
 		timeTillNextSpawn = UnityEngine.Random.Range(requestPopupTime.x, requestPopupTime.y);
 	}
@@ -99,21 +101,17 @@ public class RequestManager : MonoBehaviour
 	void OnSpellCasted(LocationList location, SpellData spell)
 	{
 		ActiveRequestData cleanup = null;
-		bool fuckedUp = false;
+		RequestData.Outcome triggeredOutcome = null;
 
 		foreach (var r in currentlyActiveRequests)
 		{
-			if(r.request.desiredLocation == location)
+			if (r.request.desiredLocation == location)
 			{
-				if (r.request.spellsThatWork.Contains(spell))
+				var outcome = r.request.outcomes.Find(o => o.spell == spell);
+				if (outcome != null)
 				{
 					cleanup = r;
-					break;
-				}
-				else if (r.request.instantFailSpells.Contains(spell))
-				{
-					cleanup = r;
-					fuckedUp = true;
+					triggeredOutcome = outcome;
 					break;
 				}
 			}
@@ -122,11 +120,7 @@ public class RequestManager : MonoBehaviour
 		if (cleanup != null)
 		{
 			currentlyActiveRequests.Remove(cleanup);
-			if (fuckedUp)
-				OnRequestFailed?.Invoke(cleanup.request);
-			else
-				OnRequestPassed?.Invoke(cleanup.request);
-		
+			OnRequestPassed?.Invoke(cleanup.request, triggeredOutcome);
 			OnRequestRemoved?.Invoke(cleanup.request);
 		}
 	}
