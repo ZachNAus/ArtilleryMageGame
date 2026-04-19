@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
 	[SerializeField] float demonGrowthTimer = 10;
 	float timeTillDemonGrowth;
 
+	[SerializeField] float goodGrowthTimer = 20f;
+	float timeTillGoodGrowth;
+
 	public bool GameStarted { get; private set; }
 	public bool GameFinished { get; private set; }
 
@@ -55,6 +58,7 @@ public class GameManager : MonoBehaviour
 		public LocationList location;
 		public int maxBadUnits;
 		public LocationList whereDoDemonsExpand;
+		public LocationList whereDoGoodiesExpand;
 
 		public int startingGoodUnits;
 		public int startingBadUnits;
@@ -72,6 +76,7 @@ public class GameManager : MonoBehaviour
 	private void Start()
 	{
 		timeTillDemonGrowth = demonGrowthTimer;
+		timeTillGoodGrowth = goodGrowthTimer;
 
 		foreach (var info in locationInfo)
 		{
@@ -103,10 +108,17 @@ public class GameManager : MonoBehaviour
 		if (GameStarted && !GameFinished)
 		{
 			timeTillDemonGrowth -= Time.deltaTime;
+			timeTillGoodGrowth -= Time.deltaTime;
 
 			if (timeTillDemonGrowth <= 0)
 			{
 				ExpandDemons();
+			}
+
+			if (timeTillGoodGrowth <= 0)
+			{
+				timeTillGoodGrowth = goodGrowthTimer;
+				ExpandGoodForces();
 			}
 		}
 	}
@@ -154,6 +166,19 @@ public class GameManager : MonoBehaviour
 		}
 
 		CheckWinLose();
+	}
+
+	void ExpandGoodForces()
+	{
+		foreach (var kvp in activeLocations)
+		{
+			ActiveLocationInfo loc = kvp.Value;
+			LocationInfo info = GetLocationInfo(kvp.Key);
+			if (info == null) continue;
+
+			if (loc.PercentGood >= 0.8f && loc.goodUnits < info.maxBadUnits)
+				loc.goodUnits++;
+		}
 	}
 
 	public void AlterUnits(LocationList location, bool goodUnits, int amount)

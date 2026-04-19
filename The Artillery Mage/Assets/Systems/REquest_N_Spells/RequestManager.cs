@@ -34,6 +34,7 @@ public class RequestManager : MonoBehaviour
 	}
 
 	float timeTillNextSpawn;
+	List<RequestData> recentRequests = new List<RequestData>();
 	private void Awake()
 	{
 		Instance = this;
@@ -53,8 +54,12 @@ public class RequestManager : MonoBehaviour
 
 		if (!GameManager.Instance.GetGoodPercent(x.desiredLocation).MeetsEquation(x.percentGoodEquation, x.percentGoodNeeded))
 			return false;
+		//if(!x.percentGoodNeeded.MeetsEquation(x.percentGoodEquation, GameManager.Instance.GetGoodPercent(x.desiredLocation)))
 
 		if (!HasDemons(x.desiredLocation))
+			return false;
+
+		if (recentRequests.Contains(x))
 			return false;
 
 		return true;
@@ -78,19 +83,25 @@ public class RequestManager : MonoBehaviour
 			currentlyActiveRequests.Add(r);
 			OnRequestAdded?.Invoke(rand);
 
+			recentRequests.Add(rand);
+			if (recentRequests.Count > 3)
+				recentRequests.RemoveAt(0);
+
 			if (requestPopupTime.y > requestPopupTime.x && UnityEngine.Random.value > 0.5f)
 			{
-				requestPopupTime.y -= 1;
-				requestPopupTime.y = Mathf.Clamp(requestPopupTime.y, requestPopupTime.y-1, 0);
+				requestPopupTime.y = Mathf.Max(requestPopupTime.y - 1, 0);
 			}
 			else
 			{
-				requestPopupTime.x -= 1;
-				requestPopupTime.x = Mathf.Clamp(requestPopupTime.x, requestPopupTime.x - 1, 0);
+				requestPopupTime.x = Mathf.Max(requestPopupTime.x - 1, 0);
 			}
-		}
 
-		timeTillNextSpawn = UnityEngine.Random.Range(requestPopupTime.x, requestPopupTime.y);
+			timeTillNextSpawn = UnityEngine.Random.Range(requestPopupTime.x, requestPopupTime.y);
+		}
+		else
+		{
+			timeTillNextSpawn = 2;
+		}
 	}
 
 	private void Update()

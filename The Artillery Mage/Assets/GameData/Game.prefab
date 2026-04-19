@@ -15400,6 +15400,7 @@ MonoBehaviour:
   - {fileID: 7271802743364760017}
   manaDrainPerSecond: 0.5
   demonGrowthTimer: 30
+  goodGrowthTimer: 60
   onWin:
     m_PersistentCalls:
       m_Calls:
@@ -15437,31 +15438,37 @@ MonoBehaviour:
   - location: 4
     maxBadUnits: 10
     whereDoDemonsExpand: 5
+    whereDoGoodiesExpand: 0
     startingGoodUnits: 0
     startingBadUnits: 10
   - location: 5
     maxBadUnits: 10
     whereDoDemonsExpand: 0
+    whereDoGoodiesExpand: 0
     startingGoodUnits: 3
     startingBadUnits: 7
   - location: 3
     maxBadUnits: 10
     whereDoDemonsExpand: 2
+    whereDoGoodiesExpand: 0
     startingGoodUnits: 3
     startingBadUnits: 7
   - location: 0
     maxBadUnits: 10
     whereDoDemonsExpand: 1
+    whereDoGoodiesExpand: 0
     startingGoodUnits: 7
     startingBadUnits: 3
   - location: 2
     maxBadUnits: 10
     whereDoDemonsExpand: 1
+    whereDoGoodiesExpand: 0
     startingGoodUnits: 7
     startingBadUnits: 3
   - location: 1
     maxBadUnits: 10
     whereDoDemonsExpand: 4
+    whereDoGoodiesExpand: 0
     startingGoodUnits: 10
     startingBadUnits: 0
 --- !u!114 &994165138920982230
@@ -15528,7 +15535,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7ac6b854651cddd4d812b3946386a18a, type: 2}
   - {fileID: 11400000, guid: ccfc5d26dd5e64c4abaaebac7f874d77, type: 2}
   startGameDelay: 1
-  requestPopupTime: {x: 20, y: 35}
+  requestPopupTime: {x: 10, y: 20}
   currentlyActiveRequests: []
 --- !u!1 &7326105702114494204
 GameObject:
