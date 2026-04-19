@@ -3805,16 +3805,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runes:
-  - rune: {fileID: 8143549989387190628}
-    rotateSpeed: 20
-  - rune: {fileID: 6346429904697889118}
-    rotateSpeed: -20
-  - rune: {fileID: 8143549989387190628}
-    rotateSpeed: 90
-  - rune: {fileID: 6346429904697889118}
-    rotateSpeed: -90
-  - rune: {fileID: 8143549989387190628}
-    rotateSpeed: 360
+  - parts:
+    - transform: {fileID: 8143549989387190628}
+      rotateSpeed: 20
+    - transform: {fileID: 6346429904697889118}
+      rotateSpeed: -20
+  - parts:
+    - transform: {fileID: 8143549989387190628}
+      rotateSpeed: 40
+    - transform: {fileID: 6346429904697889118}
+      rotateSpeed: -40
+  - parts:
+    - transform: {fileID: 8143549989387190628}
+      rotateSpeed: 90
+    - transform: {fileID: 6346429904697889118}
+      rotateSpeed: -90
+  - parts:
+    - transform: {fileID: 8143549989387190628}
+      rotateSpeed: 120
+    - transform: {fileID: 6346429904697889118}
+      rotateSpeed: -120
 --- !u!1 &6157172125403600525
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,6 +30,7 @@ public class SpellCaster : MonoBehaviour
     const float castingTimeout = 2f;
     [SerializeField] float castDelay = 1f;
     bool isCastingDelay = false;
+    public bool IsCastingDelay => isCastingDelay;
 
     void Awake()
     {

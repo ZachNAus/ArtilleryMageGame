@@ -5,11 +5,16 @@ using UnityEngine;
 public class CastingLeyLine : MonoBehaviour
 {
 	[System.Serializable]
+	class RunePart
+	{
+		public Transform transform;
+		public float rotateSpeed;
+	}
+
+	[System.Serializable]
 	class RuneDetail
 	{
-		public Transform rune;
-
-		public float rotateSpeed;
+		public List<RunePart> parts = new List<RunePart>();
 	}
 
 	[SerializeField] List<RuneDetail> runes = new List<RuneDetail>();
@@ -18,11 +23,15 @@ public class CastingLeyLine : MonoBehaviour
 	{
 		for (int i = 0; i < runes.Count; i++)
 		{
-			runes[i].rune.gameObject.SetActive(SpellCaster.Instance.activelyCasting.Count > 0);
+			bool active = SpellCaster.Instance.activelyCasting.Count > 0 || SpellCaster.Instance.IsCastingDelay;
+			bool spinning = SpellCaster.Instance.activelyCasting.Count > i || SpellCaster.Instance.IsCastingDelay;
 
-			if (SpellCaster.Instance.activelyCasting.Count > i)
+			foreach (RunePart part in runes[i].parts)
 			{
-				runes[i].rune.Rotate(new Vector3(0, 0, runes[i].rotateSpeed * Time.deltaTime));
+				part.transform.gameObject.SetActive(active);
+
+				if (spinning)
+					part.transform.Rotate(new Vector3(0, 0, part.rotateSpeed * Time.deltaTime));
 			}
 		}
 	}
