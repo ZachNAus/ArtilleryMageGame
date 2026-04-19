@@ -25,6 +25,14 @@ public class SpellCaster : MonoBehaviour
     public event Action<LocationList, SpellData> OnCastedSpell;
     public event Action<SpellData, float> OnCastDelayStarted;
 
+    static readonly Dictionary<KeyCode, KeyCode> keyAliases = new Dictionary<KeyCode, KeyCode>
+    {
+        { KeyCode.W, KeyCode.UpArrow },
+        { KeyCode.A, KeyCode.LeftArrow },
+        { KeyCode.S, KeyCode.DownArrow },
+        { KeyCode.D, KeyCode.RightArrow },
+    };
+
     HashSet<KeyCode> watchedKeys = new HashSet<KeyCode>();
     float timeSinceLastInput = 0f;
     const float castingTimeout = 2f;
@@ -53,16 +61,28 @@ public class SpellCaster : MonoBehaviour
     {
         if (movement.CurrentLocation.canCast && !movement.Moving && !isCastingDelay)
         {
+            KeyCode? pressed = null;
             foreach (KeyCode key in watchedKeys)
             {
-                if (Input.GetKeyDown(key))
+                if (Input.GetKeyDown(key)) { pressed = key; break; }
+            }
+            if (pressed == null)
+            {
+                foreach (var alias in keyAliases)
                 {
-                    activelyCasting.Add(key);
-                    timeSinceLastInput = 0f;
-                    OnInputAdded?.Invoke(key);
-                    CheckSpells();
-                    break;
+                    if (Input.GetKeyDown(alias.Key) && watchedKeys.Contains(alias.Value))
+                    {
+                        pressed = alias.Value;
+                        break;
+                    }
                 }
+            }
+            if (pressed.HasValue)
+            {
+                activelyCasting.Add(pressed.Value);
+                timeSinceLastInput = 0f;
+                OnInputAdded?.Invoke(pressed.Value);
+                CheckSpells();
             }
 
             if (activelyCasting.Count > 0)
