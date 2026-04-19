@@ -15718,6 +15718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camRotateSpeed: 180
+  audioSource: {fileID: 8201448840309962659}
   locations:
   - id: Desk
     target: {fileID: 5458164712588462151}

@@ -10,6 +10,8 @@ public class MovementSystem : MonoBehaviour
 
     [SerializeField] float camRotateSpeed = 180;
 
+    public AudioSource audioSource;
+
     [System.Serializable]
     public class LocationData
 	{
