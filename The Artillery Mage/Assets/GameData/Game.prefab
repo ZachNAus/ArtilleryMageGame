@@ -15438,31 +15438,31 @@ MonoBehaviour:
   - location: 4
     maxBadUnits: 10
     whereDoDemonsExpand: 5
-    whereDoGoodiesExpand: 0
+    whereDoGoodiesExpand: 4
     startingGoodUnits: 0
     startingBadUnits: 10
   - location: 5
     maxBadUnits: 10
     whereDoDemonsExpand: 0
-    whereDoGoodiesExpand: 0
+    whereDoGoodiesExpand: 4
     startingGoodUnits: 3
     startingBadUnits: 7
   - location: 3
     maxBadUnits: 10
     whereDoDemonsExpand: 2
-    whereDoGoodiesExpand: 0
+    whereDoGoodiesExpand: 4
     startingGoodUnits: 3
     startingBadUnits: 7
   - location: 0
     maxBadUnits: 10
     whereDoDemonsExpand: 1
-    whereDoGoodiesExpand: 0
+    whereDoGoodiesExpand: 5
     startingGoodUnits: 7
     startingBadUnits: 3
   - location: 2
     maxBadUnits: 10
     whereDoDemonsExpand: 1
-    whereDoGoodiesExpand: 0
+    whereDoGoodiesExpand: 3
     startingGoodUnits: 7
     startingBadUnits: 3
   - location: 1

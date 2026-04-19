@@ -47,7 +47,14 @@ public class SpellCaster : MonoBehaviour
     {
         Instance = this;
 
-        MovementSystem.OnArrived += x => ClearCasting();
+        MovementSystem.Instance.OnArrived += OnArrivedClearCasting;
+    }
+
+    void OnArrivedClearCasting(string _) => ClearCasting();
+
+    void OnDestroy()
+    {
+        MovementSystem.Instance.OnArrived -= OnArrivedClearCasting;
     }
 
     void Start()

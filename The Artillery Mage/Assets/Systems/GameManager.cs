@@ -90,6 +90,11 @@ public class GameManager : MonoBehaviour
 		RequestManager.Instance.OnRequestPassed += OnRequestPassed;
 	}
 
+	void OnDestroy()
+	{
+		RequestManager.Instance.OnRequestPassed -= OnRequestPassed;
+	}
+
 	void OnRequestPassed(RequestData request, RequestData.Outcome outcome)
 	{
 		foreach (var effect in outcome.effects)
@@ -176,8 +181,12 @@ public class GameManager : MonoBehaviour
 			LocationInfo info = GetLocationInfo(kvp.Key);
 			if (info == null) continue;
 
-			if (loc.PercentGood >= 0.8f && loc.goodUnits < info.maxBadUnits)
-				loc.goodUnits++;
+			if (loc.PercentGood >= 0.8f)
+			{
+				LocationList expandTarget = info.whereDoGoodiesExpand;
+				if (activeLocations.ContainsKey(expandTarget))
+					activeLocations[expandTarget].goodUnits++;
+			}
 		}
 	}
 
@@ -228,7 +237,7 @@ public class GameManager : MonoBehaviour
 		}
 
 		if (activeLocations.ContainsKey(LocationList.DemonGate) &&
-			activeLocations[LocationList.DemonGate].PercentGood >= 0.8f)
+			activeLocations[LocationList.DemonGate].PercentGood >= 0.99f)
 		{
 			WinGame();
 		}

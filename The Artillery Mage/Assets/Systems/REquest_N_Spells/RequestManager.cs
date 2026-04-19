@@ -47,6 +47,11 @@ public class RequestManager : MonoBehaviour
 		SpellCaster.Instance.OnCastedSpell += OnSpellCasted;
 	}
 
+	void OnDestroy()
+	{
+		SpellCaster.Instance.OnCastedSpell -= OnSpellCasted;
+	}
+
 	bool IsInPool(RequestData x)
 	{
 		if (!currentlyActiveRequests.All(y => y.request.desiredLocation != x.desiredLocation)) //REquest not in area with request already

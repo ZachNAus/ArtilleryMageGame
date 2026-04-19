@@ -17,6 +17,11 @@ public class RequestNotifier : MonoBehaviour
         RequestManager.Instance.OnRequestAdded += OnRequestAdded;
     }
 
+    void OnDestroy()
+    {
+        RequestManager.Instance.OnRequestAdded -= OnRequestAdded;
+    }
+
 
     private void OnRequestAdded(RequestData request)
     {

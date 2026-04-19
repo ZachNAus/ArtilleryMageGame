@@ -39,7 +39,7 @@ public class MovementSystem : MonoBehaviour
 		GoToLocation(locations[0], true);
 	}
 
-	public static event System.Action<string> OnArrived;
+	public event System.Action<string> OnArrived;
 
 	public void GoToLocation(string id)
 	{

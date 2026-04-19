@@ -24,9 +24,17 @@ public class CastingSpellUI : MonoBehaviour
 		SpellCaster.Instance.OnInputAdded += UpdateInputs;
 		SpellCaster.Instance.OnCastingCleared += UpdateInputs;
 		SpellCaster.Instance.OnCastDelayStarted += StartCastBar;
-		MovementSystem.OnArrived += SetActiveStatus;
+		MovementSystem.Instance.OnArrived += SetActiveStatus;
 
 		gameObject.SetActive(false);
+	}
+
+	void OnDestroy()
+	{
+		SpellCaster.Instance.OnInputAdded -= UpdateInputs;
+		SpellCaster.Instance.OnCastingCleared -= UpdateInputs;
+		SpellCaster.Instance.OnCastDelayStarted -= StartCastBar;
+		MovementSystem.Instance.OnArrived -= SetActiveStatus;
 	}
 
 	void SetActiveStatus(string id)
