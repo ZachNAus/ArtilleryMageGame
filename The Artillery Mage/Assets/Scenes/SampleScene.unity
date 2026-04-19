@@ -627,10 +627,321 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 790444702620071362, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790444702620071362, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790444702620071362, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790444702620071362, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790444702620071362, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790444702620071362, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360364594716063325, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_text
+      value: My most precise spell, powerful attack magic adapted from demonic magic.
+        I should use this if I need to destroy something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588747950972516621, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588747950972516621, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588747950972516621, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 832.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588747950972516621, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 840
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588747950972516621, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 416.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588747950972516621, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730676228758193270, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730676228758193270, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730676228758193270, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730676228758193270, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730676228758193270, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730676228758193270, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964039878278287890, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964039878278287890, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964039878278287890, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964039878278287890, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 840
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964039878278287890, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1964039878278287890, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294834283150864885, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2419700935493814837, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613654317466661888, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_text
+      value: Create a portal entrance at the location. The exit of the portal will
+        automatically open at the correct location based on the request.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023193268894887073, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023193268894887073, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023193268894887073, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023193268894887073, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023193268894887073, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023193268894887073, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437626849658153950, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437626849658153950, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437626849658153950, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437626849658153950, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 840
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437626849658153950, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3437626849658153950, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590204917288702201, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_text
+      value: An adaptation of the Call Rain spell that allows me to rain down fire
+        in an area. It's powerful, but has a similar casting method to Call Rain,
+        so be careful.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604794783319442866, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604794783319442866, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604794783319442866, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604794783319442866, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 840
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604794783319442866, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604794783319442866, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420
+      objectReference: {fileID: 0}
     - target: {fileID: 4350105087742036261, guid: 72b904e85ee114a44ac4cb0215ff432f,
         type: 3}
       propertyPath: m_Name
       value: Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 4372493023293266134, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_text
+      value: Demon Precision Strike
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479306771108563205, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_text
+      value: Summons clouds to bring rain to an area. A simple spell that has a lot
+        of uses, including extinguishing fires, destabilizing terrain and covering
+        stealthy approaches.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681541479686016126, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681541479686016126, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681541479686016126, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681541479686016126, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 840
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681541479686016126, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4681541479686016126, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848196469909460050, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848196469909460050, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848196469909460050, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848196469909460050, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 840
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848196469909460050, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848196469909460050, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420
       objectReference: {fileID: 0}
     - target: {fileID: 5011356961508455858, guid: 72b904e85ee114a44ac4cb0215ff432f,
         type: 3}
@@ -680,6 +991,144 @@ PrefabInstance:
     - target: {fileID: 5011356961508455858, guid: 72b904e85ee114a44ac4cb0215ff432f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038553251131290559, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_text
+      value: 'Forbidden magic. Extremely destructive and should almost never be used...
+
+
+        unless
+        there''s no humans around...?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248363175255211438, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248363175255211438, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248363175255211438, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248363175255211438, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248363175255211438, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248363175255211438, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408827971698998839, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_text
+      value: Powerful healing magic that restores life, closes wounds and grants
+        increased strength. Quintessential support magic.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5677479185000159780, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_text
+      value: If you have received a request that sounds like it wasn't sent by a
+        human, cast this spell instead to strike back at the enemy!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680167374561132375, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_text
+      value: This spell is tuned to locate and destroy any spellcasters channeling
+        demonic magic. If there's enemy mages or magic involved, this spell is a
+        good choice.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798746113898963354, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798746113898963354, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798746113898963354, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 832.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798746113898963354, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798746113898963354, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1263.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6798746113898963354, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420
+      objectReference: {fileID: 0}
+    - target: {fileID: 7271802743364760017, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042587446169799018, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491348622820958901, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491348622820958901, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491348622820958901, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491348622820958901, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 840
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491348622820958901, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8491348622820958901, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -420
+      objectReference: {fileID: 0}
+    - target: {fileID: 8905862489547322465, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122198311145798446, guid: 72b904e85ee114a44ac4cb0215ff432f,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
