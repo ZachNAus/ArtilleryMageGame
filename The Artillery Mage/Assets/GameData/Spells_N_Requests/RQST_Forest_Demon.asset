@@ -10,33 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
-  m_Name: RQST_Volcano_DemonA
+  m_Name: RQST_Forest_Demon
   m_EditorClassIdentifier: 
   personRequesting: K1ngd0m S01dier
-  requestDetails: STRONG AND HANDSOME DEMONS CAMPING AT <color="red">VOLCANO</color>.
-    ERADICATE THEM WITHOUT MERCY.
-  timeToComplete: 60
-  desiredLocation: 5
-  percentGoodEquation: 0
-  percentGoodNeeded: 0.75
+  requestDetails: WE HAVE HEARD THE <color="green">FOREST</color> IS COLD THIS TIME
+    OF YEAR. USE YOUR MAGIC TO WARM IT UP.
+  timeToComplete: 50
+  desiredLocation: 3
+  percentGoodEquation: 2
+  percentGoodNeeded: 1
   outcomes:
   - spell: {fileID: 11400000, guid: 2412411c8f6a78a4aa6719160b3cc15d, type: 2}
     effects:
     - locationToAltarUnits: 4
       goodUnitsAlter: 0
       badUnitsAlter: -2
-  - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
-    effects:
-    - locationToAltarUnits: 0
-      goodUnitsAlter: -3
-      badUnitsAlter: 0
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
     effects:
-    - locationToAltarUnits: 0
-      goodUnitsAlter: -4
+    - locationToAltarUnits: 3
+      goodUnitsAlter: -3
+      badUnitsAlter: 1
+  - spell: {fileID: 11400000, guid: c9c86d345ef30714f9548c4abcb9ac1b, type: 2}
+    effects:
+    - locationToAltarUnits: 3
+      goodUnitsAlter: -2
       badUnitsAlter: 0
   - spell: {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     effects:
-    - locationToAltarUnits: 0
+    - locationToAltarUnits: 3
       goodUnitsAlter: -7
-      badUnitsAlter: -2
+      badUnitsAlter: -3

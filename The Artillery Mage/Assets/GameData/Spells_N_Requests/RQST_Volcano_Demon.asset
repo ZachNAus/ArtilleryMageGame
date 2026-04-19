@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29908912a52fe054a9ce08f6eddc3f9b, type: 3}
-  m_Name: RQST_Farms_Demon
+  m_Name: RQST_Volcano_Demon
   m_EditorClassIdentifier: 
   personRequesting: K1ngd0m S01dier
-  requestDetails: DISEASE AND ROT HAVE INFECTED THE SUPPLY OF FOOD. CLEANSE THE <color="yellow">FARMS</color>
-    IN BEAUTIFUL FIRE, THAT THEY MAY GROW BACK STRONGER.
-  timeToComplete: 55
-  desiredLocation: 0
+  requestDetails: STRONG AND HANDSOME DEMONS CAMPING AT <color="red">VOLCANO</color>.
+    ERADICATE THEM WITHOUT MERCY.
+  timeToComplete: 60
+  desiredLocation: 5
   percentGoodEquation: 2
   percentGoodNeeded: 1
   outcomes:
@@ -29,14 +29,14 @@ MonoBehaviour:
     effects:
     - locationToAltarUnits: 0
       goodUnitsAlter: -3
-      badUnitsAlter: 1
+      badUnitsAlter: 0
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}
     effects:
     - locationToAltarUnits: 0
-      goodUnitsAlter: -6
-      badUnitsAlter: 2
+      goodUnitsAlter: -4
+      badUnitsAlter: 0
   - spell: {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     effects:
     - locationToAltarUnits: 0
-      goodUnitsAlter: -8
+      goodUnitsAlter: -7
       badUnitsAlter: -2
