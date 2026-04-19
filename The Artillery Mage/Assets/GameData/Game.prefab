@@ -3793,7 +3793,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     - {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
     - {fileID: 11400000, guid: 8d052a212c46b2d48b1e655a43ac8708, type: 2}
-    - {fileID: 11400000, guid: 8e4f890f55705c140b27559d41131c23, type: 2}
     - {fileID: 11400000, guid: 2412411c8f6a78a4aa6719160b3cc15d, type: 2}
     m_values:
     - effectsToEnable:
@@ -3817,8 +3816,6 @@ MonoBehaviour:
       - {fileID: 8930340221069202373}
     - effectsToEnable:
       - {fileID: 2729306402626561579}
-    - effectsToEnable:
-      - {fileID: 1063305956149635963}
     - effectsToEnable: []
 --- !u!1 &2019384473162710917
 GameObject:
@@ -4984,8 +4981,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     - {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
     - {fileID: 11400000, guid: 8d052a212c46b2d48b1e655a43ac8708, type: 2}
-    - {fileID: 11400000, guid: 8e4f890f55705c140b27559d41131c23, type: 2}
-    - {fileID: 11400000, guid: 2412411c8f6a78a4aa6719160b3cc15d, type: 2}
     m_values:
     - effectsToEnable:
       - {fileID: 7598636900799499857}
@@ -5009,9 +5004,6 @@ MonoBehaviour:
       - {fileID: 1555414877919330663}
     - effectsToEnable:
       - {fileID: 3099932752378508808}
-    - effectsToEnable:
-      - {fileID: 4790163731244427923}
-    - effectsToEnable: []
 --- !u!1 &2592103330734466005
 GameObject:
   m_ObjectHideFlags: 0
@@ -10644,7 +10636,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     - {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
     - {fileID: 11400000, guid: 8d052a212c46b2d48b1e655a43ac8708, type: 2}
-    - {fileID: 11400000, guid: 8e4f890f55705c140b27559d41131c23, type: 2}
     - {fileID: 11400000, guid: 2412411c8f6a78a4aa6719160b3cc15d, type: 2}
     m_values:
     - effectsToEnable:
@@ -10668,8 +10659,6 @@ MonoBehaviour:
       - {fileID: 6781143154089328087}
     - effectsToEnable:
       - {fileID: 145189325359405858}
-    - effectsToEnable:
-      - {fileID: 6843580317736303195}
     - effectsToEnable: []
 --- !u!1 &4675631272472653009
 GameObject:
@@ -15226,7 +15215,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     - {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
     - {fileID: 11400000, guid: 8d052a212c46b2d48b1e655a43ac8708, type: 2}
-    - {fileID: 11400000, guid: 8e4f890f55705c140b27559d41131c23, type: 2}
     - {fileID: 11400000, guid: 2412411c8f6a78a4aa6719160b3cc15d, type: 2}
     m_values:
     - effectsToEnable:
@@ -15250,8 +15238,6 @@ MonoBehaviour:
       - {fileID: 9217581227351452254}
     - effectsToEnable:
       - {fileID: 4967031822923779628}
-    - effectsToEnable:
-      - {fileID: 1852695561887488399}
     - effectsToEnable: []
 --- !u!1 &7305237334596221683
 GameObject:
@@ -16595,7 +16581,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     - {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
     - {fileID: 11400000, guid: 8d052a212c46b2d48b1e655a43ac8708, type: 2}
-    - {fileID: 11400000, guid: 8e4f890f55705c140b27559d41131c23, type: 2}
     - {fileID: 11400000, guid: 2412411c8f6a78a4aa6719160b3cc15d, type: 2}
     m_values:
     - effectsToEnable:
@@ -16621,8 +16606,6 @@ MonoBehaviour:
       - {fileID: 8892968042713062797}
     - effectsToEnable:
       - {fileID: 7566770853054609515}
-    - effectsToEnable:
-      - {fileID: 1686780062645655611}
     - effectsToEnable: []
 --- !u!1 &7929111688462594806
 GameObject:
@@ -16877,7 +16860,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 211cf15876d8a3349b3dcad81460c705, type: 2}
     - {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
     - {fileID: 11400000, guid: 8d052a212c46b2d48b1e655a43ac8708, type: 2}
-    - {fileID: 11400000, guid: 8e4f890f55705c140b27559d41131c23, type: 2}
     - {fileID: 11400000, guid: 2412411c8f6a78a4aa6719160b3cc15d, type: 2}
     m_values:
     - effectsToEnable:
@@ -16902,8 +16884,6 @@ MonoBehaviour:
       - {fileID: 489222443728924791}
     - effectsToEnable:
       - {fileID: 4245419571450485337}
-    - effectsToEnable:
-      - {fileID: 7153053579561726468}
     - effectsToEnable: []
 --- !u!1 &8088994595387411719
 GameObject:

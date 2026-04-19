@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Portal
   inputs: 120100001101000013010000130100001201000011010000
-  visualEffects: {fileID: 0}
-  particleAliveTime: 0
+  particleAliveTime: 5
+  audio: []
