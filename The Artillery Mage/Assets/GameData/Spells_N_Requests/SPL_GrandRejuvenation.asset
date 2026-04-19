@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Grand Rejuvenation
   inputs: 13010000120100001401000011010000
-  visualEffects: {fileID: 0}
-  particleAliveTime: 0
+  particleAliveTime: 5
+  audio:
+  - {fileID: 8300000, guid: f9377333abf851149827343e111422bb, type: 3}
