@@ -52,6 +52,7 @@ public class RequestManager : MonoBehaviour
 		pool.AddRange(requestPool.Where(x =>
 			currentlyActiveRequests.All(y => y.request.desiredLocation != x.desiredLocation)
 			&& GameManager.Instance.GetGoodPercent(x.desiredLocation).MeetsEquation(x.percentGoodEquation, x.percentGoodNeeded)
+			&& HasDemons(x.desiredLocation)
 		));
 
 		if (pool.Count > 0)
@@ -66,6 +67,11 @@ public class RequestManager : MonoBehaviour
 
 			currentlyActiveRequests.Add(r);
 			OnRequestAdded?.Invoke(rand);
+
+			if (requestPopupTime.y > requestPopupTime.x && UnityEngine.Random.value > 0.5f)
+				requestPopupTime.y -= 1;
+			else
+				requestPopupTime.x -= 1;
 		}
 
 		timeTillNextSpawn = UnityEngine.Random.Range(requestPopupTime.x, requestPopupTime.y);
@@ -128,6 +134,12 @@ public class RequestManager : MonoBehaviour
 			OnRequestPassed?.Invoke(cleanup.request, triggeredOutcome);
 			OnRequestRemoved?.Invoke(cleanup.request);
 		}
+	}
+
+	bool HasDemons(LocationList location)
+	{
+		GameManager.Instance.GetUnits(location, out int _, out int bad);
+		return bad > 0;
 	}
 
 #if UNITY_EDITOR

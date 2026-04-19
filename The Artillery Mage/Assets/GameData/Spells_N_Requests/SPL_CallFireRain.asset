@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Call Fire Rain
   inputs: 1101000013010000140100001201000012010000
-  visualEffects: {fileID: 2899708158461106523, guid: c7d7a8b5ad583e14396999f005d84e40,
-    type: 3}
   particleAliveTime: 5
+  audio:
+  - {fileID: 8300000, guid: 090310b53234a304eaa6ed572701b446, type: 3}

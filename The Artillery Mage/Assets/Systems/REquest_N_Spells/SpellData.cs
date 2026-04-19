@@ -12,4 +12,6 @@ public class SpellData : ScriptableObject
 
 	[Header("FX")]
 	public float particleAliveTime;
+
+	public List<AudioClip> audio;
 }

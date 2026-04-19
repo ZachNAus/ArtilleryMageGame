@@ -156,6 +156,9 @@ public class SpellCaster : MonoBehaviour
         if (locationDisplays.TryGetValue(location, out LocationWorldDisplay display))
             display.PlaySpellVFX(spell, spell.particleAliveTime);
 
+        foreach (AudioClip clip in spell.audio)
+            movement.audioSource.PlayOneShot(clip);
+
         OnCastedSpell?.Invoke(location, spell);
     }
 
