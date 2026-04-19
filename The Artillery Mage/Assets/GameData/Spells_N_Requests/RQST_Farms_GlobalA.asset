@@ -23,8 +23,8 @@ MonoBehaviour:
   - spell: {fileID: 11400000, guid: 26669fc883bed7a4a9b90351f1f1f1f8, type: 2}
     effects:
     - locationToAltarUnits: 0
-      goodUnitsAlter: 4
-      badUnitsAlter: 0
+      goodUnitsAlter: 2
+      badUnitsAlter: -2
   - spell: {fileID: 11400000, guid: 1e2a898bf66c7b34e9dbb4f984ee53f4, type: 2}
     effects:
     - locationToAltarUnits: 0

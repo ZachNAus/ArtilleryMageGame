@@ -17,7 +17,7 @@ MonoBehaviour:
     their escape and strike down the remaining demons.
   timeToComplete: 50
   desiredLocation: 5
-  percentGoodEquation: 0
+  percentGoodEquation: 2
   percentGoodNeeded: 0.85
   outcomes:
   - spell: {fileID: 11400000, guid: 10ebaf253678f5a469484ba8c93eb838, type: 2}

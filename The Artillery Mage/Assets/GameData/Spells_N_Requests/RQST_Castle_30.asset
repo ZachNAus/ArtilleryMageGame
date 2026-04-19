@@ -17,7 +17,7 @@ MonoBehaviour:
     own large-scale attack magic. Please help us!
   timeToComplete: 80
   desiredLocation: 1
-  percentGoodEquation: 1
+  percentGoodEquation: 3
   percentGoodNeeded: 0.3
   outcomes:
   - spell: {fileID: 11400000, guid: 114c633e10ea4bf4ab0561ff56704064, type: 2}

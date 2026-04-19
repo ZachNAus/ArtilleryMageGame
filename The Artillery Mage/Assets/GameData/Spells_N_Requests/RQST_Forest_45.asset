@@ -17,7 +17,7 @@ MonoBehaviour:
     magical interference from the demons is slowing us down. Make them stop.
   timeToComplete: 30
   desiredLocation: 3
-  percentGoodEquation: 0
+  percentGoodEquation: 2
   percentGoodNeeded: 0.55
   outcomes:
   - spell: {fileID: 11400000, guid: 114c633e10ea4bf4ab0561ff56704064, type: 2}
